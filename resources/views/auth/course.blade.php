@@ -43,7 +43,7 @@
                                         <div class="form-input numbers">
                                           <label>* Phone Number:</label>
                                           <input type="number" id ="Phone" name="number11">
-                                          <input type="number" id ="Phone" name="number12">
+                                          <input type="number" id ="Phone11" name="number12">
                                           <input type="number" id ="Phones" name="number13">
                                        </div>   
 
