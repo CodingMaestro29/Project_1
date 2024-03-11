@@ -5,12 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Http;
+
 
 use App\Models\Student;
 
 class AuthController extends Controller
 {
-    public function index()
+
+
+   public function index()
     {
         return view('auth.student-login');
     }
@@ -18,13 +24,52 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-       // dd($request->all());
+        $request->validate(
+        [
+        'email' => 'required|email',
+          'password' => 'required',
+        ]);
+
+
+        if(Auth::guard('student')->attempt($request->only('email','password'))){
+          //  dd('test1');
+            return redirect('dashboard');
+           }else{
+         //   dd('test2');
+         return redirect('login')->withErrors(['login' => 'Invalid login details']);
+           }
+    }
+
+
+
+    public function getDays()
+    {
+        return range(1, 31);
+    }
+
+    public function getMonths()
+    {
+        $months = [
+            'January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December',
+        ];
+    
+        return $months;
+    }
+
+    public function getYears()
+    {
+        return range(1940, 2080);
     }
 
 
     public function register_view()
     {
-        return view('auth.course');
+        $days = $this->getDays();
+        $months = $this->getMonths();
+        $years = $this->getYears();
+        
+        return view('auth.course',  compact('days', 'months', 'years'));
     }
 
 
@@ -58,8 +103,8 @@ class AuthController extends Controller
             'licenseState' =>  $request->licenseState,
             'licensenumber' =>  $request->licensenumber,
             'username' =>  $request->username,
-            'password' =>  $request->password,
-            'password_confirmation' =>  $request->password_confirmation,
+            'password' =>  bcrypt($request->password),
+            'password_confirmation' =>bcrypt($request->password),
             'address' =>  $request->address,
             'city' =>  $request->city,
             'states' =>  $request->states,
@@ -67,7 +112,22 @@ class AuthController extends Controller
             'find' =>  $request->find,
          ]);
 
+
+         if(Auth::attempt($request->only('email','password'))){
+          return redirect('dashboard');
+         }else{
+            return redirect('register')->withError('Error');
+         }
+
        
+    }
+
+
+    public function logout()
+    {
+        Session::flush();
+        Auth::logout();
+        return redirect('register');
     }
 
 

@@ -16,8 +16,7 @@ img {
     justify-content: space-between;
     align-items: center;
     padding-top: 10px;
-        position: relative;
-
+    position: relative;
 }
 .rating {
     position: absolute;
@@ -32,9 +31,6 @@ img {
     color: rgba(23, 88, 142, 1);
     margin: 0;
 }
-/*.rating {
-    margin-left: 130px;
-}*/
 .number {
     text-align: right;
     margin-top: 18px;
@@ -62,7 +58,6 @@ img {
     font-family: "Inter", sans-serif;
     margin: 0;
 }
-   
 .number img {
     margin-bottom: -17px;
     width: auto;
@@ -72,46 +67,47 @@ img {
 }  
 /*toggle*/
 .navbar {
-            justify-content: end;
+         justify-content: end;
         }
-        .navbar-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
+.navbar-toggle {
+     display: none;
+     flex-direction: column;
+     cursor: pointer;
         }
 
-       .navbar-toggle span {
+.navbar-toggle span {
     width: 25px;
     height: 3px;
-    background-color: #60a0ec;
-    margin-bottom: 5px;
+    background-color: #fff;
+    margin-bottom: 2.5px;
+    margin-top: 2.5px;
 }
  
-        .navbar-toggle .fas {
-            display: none; /* Hide cross icon by default */
-            color: rgba(51, 153, 255, 1);
-            font-size: 24px;
-            margin-right: 10px;
-        }
+.navbar-toggle .fas {
+display: none; /* Hide cross icon by default */
+color: rgba(51, 153, 255, 1);
+font-size: 24px;
+margin-right: 10px;
+ }
 
-        .navbar-menu {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-        }
-
-        
-        .navbar-menu a {
-            color: #fff;
-            text-decoration: none;
-        }
-        i.fas.fa-times {
+.navbar-menu {
+   list-style-type: none;
+     display: flex;
+    justify-content: center;
+ }
+  .navbar-menu a {
+ color: #fff;
+ text-decoration: none;
+     }
+i.fas.fa-times {
     display: none;
 }
 i.fas.fa-times {
-    color: #60a2ec;
+    color: #fff;
     font-size: 32px;
     margin-top: 30px;
+    background: #3399ff;
+    padding: 4px 8.5px;
 }
 /*close-toggle*/
 li.star a {
@@ -135,6 +131,7 @@ li.star a {
 .navigation li a {
     color: rgba(255, 255, 255, 1);
     text-decoration: none;
+    outline: none;
 }
 .navigation ul {
     text-align: center;
@@ -162,8 +159,7 @@ h1.title {
     border-bottom: 2px solid rgba(204, 204, 204, 1);
     padding-bottom: 30px;
     padding-top: 15px;
-        text-transform: capitalize;
-
+    text-transform: capitalize;
 }
 h3.login-title {
     color: rgba(23, 88, 142, 1);
@@ -183,7 +179,6 @@ span.moreinfo {
 li.star {
     position: relative;
 }
-
 img.star {
     position: absolute;
     left: 18px;
@@ -212,7 +207,6 @@ form.registration-form input {
 form.registration-form input#mname {
     width: 59px;
     margin-left: 6px;
-
 }
 .form-input.email {
     padding-left: 35px;
@@ -239,7 +233,6 @@ form.registration-form input#Phones {
 }
 .form-input.date {
     margin-left: -17px;
-    /*border-bottom: 2px solid rgba(204, 204, 204, 1);*/
     padding-bottom: 35px;
 }
 form.registration-form select {
@@ -250,7 +243,6 @@ select#date {
     width: 126px;
     height: 38px;
     margin-left: 8px;
-
 }
 select#month {
     width: 94px;
@@ -382,7 +374,6 @@ select#find {
     height: 15px;
     top: 56px;
 }
-
 img.mirrorimage {
     width: 175px;
     margin-left: -14px;
@@ -408,10 +399,6 @@ p.copyright {
 img.privacy {
     width: auto;
     height: auto;
-  /*  border: 1px solid rgba(221, 221, 221, 1);
-    border-radius: 11px;
-    padding: 5px 30px;
-    object-fit: cover;*/
 }
 .order-summary-section {
     border: 1px solid rgba(221, 221, 221, 1);
@@ -467,7 +454,6 @@ p.course-name {
     color: rgba(51, 51, 51, 1);
     font-family: "Inter", sans-serif;
 }
-
 p.course-price {
    font-size: 16px;
     line-height: 19px;
@@ -476,8 +462,7 @@ p.course-price {
     font-family: "Inter", sans-serif;
     display: flex;
     gap: 10px;
-        align-items: center;
-
+    align-items: center;
 }
 p.course-price.free {
     color: rgba(255, 0, 0, 1);
@@ -506,7 +491,6 @@ img.totalcartimg {
 /*testimonial*/
 .testimonil-section {
     display: flex;
-  /*  align-items: center;*/
 }
 p.tetimonial-content {
     font-size: 16px;
@@ -665,8 +649,7 @@ p.about-description {
     line-height: 19px;
     font-weight: 400;
     font-family: "Inter", sans-serif;
-        width: 730px;
-
+    width: 730px;
 }
 p.about-description a {
     color: rgba(23, 88, 142, 1);
@@ -735,9 +718,6 @@ p.refund-policy {
     font-family: "Inter", sans-serif;
 }
 /*terms*/
-/*p.about-description.terms {
-    margin-top: 5px;
-}*/
 p.about-description.terms.left {
     padding-left: 20px;
 }
@@ -835,9 +815,8 @@ a.forget-user-name {
     margin: 0;
     font-family: "Inter", sans-serif;
     color: rgba(23, 88, 142, 1);
-      display: block;
-      text-align: center;
-
+    display: block;
+    text-align: center;
 }
 .submit-btn input[type="button"] {
     background: rgba(27, 188, 155, 1);
@@ -850,7 +829,6 @@ a.forget-user-name {
     padding: 10px;
     font-family: "Inter", sans-serif;
     width: 150px;
-    /* height: 50px; */
     padding: 10px 10px 26px 10px;
 }
 p.subtitle {
@@ -871,6 +849,70 @@ p.subtitle {
     left: 0;
     right: 0;
 }
+/*student Dashboard*/
+.student-dashboard-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.dashboard-tabs a {
+    display: block;
+    padding: 10px;
+    margin: 0 0 20px 0px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    color: rgb(93 153 234);
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid rgb(95 159 235);
+
+}
+a.get-certificate {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: rgba(23, 88, 142, 1);
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+/*close*/
+/*student registartion information*/
+.student-regis-info {
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.student-information {
+    padding-top: 30px;
+}
+.student-regis-info span {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    color: rgba(51, 51, 51, 1);
+    font-family: "Inter", sans-serif;
+}
+.student-regis-info h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 19px; 
+    color: rgba(51, 51, 51, 1);
+    font-family: "Inter", sans-serif;
+    width: 190px;
+    text-transform: capitalize;
+}
+.table-content h3.about-title {
+    font-size: 20px;
+}
+a.edit {
+    text-decoration: none;
+}
+/*close*/ 
 
 /*Mobile Responsive*/
 @media (max-width:900px) and (min-width: 768px){
@@ -880,10 +922,6 @@ p.subtitle {
 p.order-heading {
     font-size: 13px;
 }
-/*img.privacy {
-    width: 292px;
-    height: auto;
-}*/
 }
 @media (max-width: 1080px){
     .navigation li {
@@ -891,50 +929,48 @@ p.order-heading {
 }
 }
 @media (max-width:992px){
- 
 .navigation li {
     padding: 15px 25px;
 }
-  .main-header-section {
-    display: flex;
+.main-header-section {    
+    display: flex; 
     align-items: center;
     justify-content: space-between;
 }
-    .navbar-menu {
-                display: none;
-            }
-          .navbar {
-                display: flex;
-            }
-            .navbar-toggle {
-                display: flex;
-                    margin-top: 30px;
-
-            }
-
-           .navbar-menu.active {
-                display: flex;
-                flex-direction: column !important;
-                position: absolute;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background: linear-gradient(180deg, #69C1F6 0%, #5B91E7 100%);
-                z-index: 99999;
-                    padding-bottom: 15px;
-
-            }
-
-            .navbar-toggle.active .fas.fa-times {
-                display: block; /* Display cross icon when menu is active */
-            }
-            .navigation {
+.navbar-menu {
+    display: none; 
+}
+.navbar {
+    display: flex;
+}
+.navbar-toggle {
+    display: flex;
+    margin-top: 30px;
+}
+.navbar-menu.active {
+    display: flex;
+    flex-direction: column !important;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, #69C1F6 0%, #5B91E7 100%);
+    z-index: 99999;
+    padding-bottom: 15px;
+}
+.navbar-toggle.active .fas.fa-times {
+    display: block; /* Display cross icon when menu is active */
+}
+div#navbar-toggle {
+    background: #3399ff;
+    border: 1px solid #3399ff;
+    padding: 7px;
+}
+.navigation {
     background: none;
     margin-top: -21px;
 }
-        
-
-  .container {
+.container {
     width: 100%;
     margin: 0 auto;
 }
@@ -969,6 +1005,15 @@ p.about-description {
 }
 
 @media (max-width:767px){
+    .dashboard-tabs a {
+    width: 165px;
+}
+    .dashboard-tabs {
+    margin-top: 40px;
+}
+    .student-dashboard-section {
+    display: block;
+}
     .navbar-menu.active {
     top: 60px;
 }
@@ -1012,9 +1057,6 @@ p.tetimonial-content {
 .main-section {
     display: block;
 }
-/*form.registration-form {
-    margin-left: 0px;
-}*/
 form.registration-form input {
      width: 150px; 
 }
@@ -1033,19 +1075,16 @@ select#month {
 .order-summary-section {
     width: 330px;
 }
-/*.form-input.find-us label {
-    margin-left: 0px;
-}*/
 select#find {
     width: 200px;
     margin-top: 10px;
 }
-/*.form-input.find-us p {
-    margin-left: 0;
-}*/
 }
 
 @media (max-width:450px){
+    .student-regis-info {
+    display: block;
+}
     .form-input.date.licensenumber.user.password {
      margin-left: 0px;
 }
@@ -1104,7 +1143,7 @@ select#license {
 }
 input#licensenumber {
     width: 100%;
-        margin-top: 10px;
+    margin-top: 10px;
 }
 .form-input.date.licensenumber {
     margin-left: 0;
@@ -1129,7 +1168,7 @@ input#licensenumber {
 }
 select#statse {
     width: 100%;
-        margin-top: 10px;
+    margin-top: 10px;
 }
 .form-input.states {
     margin-left: 0px;
@@ -1174,7 +1213,9 @@ select#years {
 .order-summary-section {
    width: 100%;
 }
-/*img.privacy {
-    width: 80%;
-}*/
+}
+
+.alert.alert-danger{
+    color:red;
+    Text-align: center
 }

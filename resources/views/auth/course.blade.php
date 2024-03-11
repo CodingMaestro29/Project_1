@@ -50,22 +50,31 @@
                                        <div class="form-input date">
                                           <label>* Date Of Birth:</label>
                                             <select id="date" name="date">
-                                                  <option value="...">...</option>
-                                                  <option value="1">1</option>
+                                                  <option value="...">Day</option>
+                                                  @foreach ($days as $day)
+                                                    <option value="{{ $day }}">{{ $day }}</option>
+                                                @endforeach
+                                                  <!-- <option value="1">1</option>
                                                   <option value="2">2</option>
-                                                  <option value="3">3</option>
+                                                  <option value="3">3</option> -->
                                             </select> 
                                             <select id="month" name="month">
-                                                  <option value="...">...</option>
-                                                  <option value="1">1</option>
+                                                  <option value="...">Month</option>
+                                                  @foreach ($months as $month)
+                                                      <option value="{{ $month }}">{{ $month }}</option>
+                                                  @endforeach
+                                                  <!-- <option value="1">1</option>
                                                   <option value="2">2</option>
-                                                  <option value="3">3</option>
+                                                  <option value="3">3</option> -->
                                             </select>
                                             <select id="years" name="years">
-                                                  <option value="...">...</option>
-                                                  <option value="1990">1990</option>
+                                                  <option value="...">Year</option>
+                                                  @foreach ($years as $year)
+                                                      <option value="{{ $year }}">{{ $year }}</option>
+                                                  @endforeach
+                                                  <!-- <option value="1990">1990</option>
                                                   <option value="1992">1991</option>
-                                                  <option value="1993">1992</option>
+                                                  <option value="1993">1992</option> -->
                                             </select>
                                        </div>
                                               <div class="border-line"></div>
