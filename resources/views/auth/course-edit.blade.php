@@ -7,7 +7,7 @@
         <div class="main-section">    
                             <div class="form-section">    
                                 <h3 class="login-title">Create Your Login</h3>
-                                 <form class="registration-form"  action="{{route('auth.register') }}" method="post">
+                                 <form class="registration-form"  action="{{route('register.update') }}" method="post">
                                  @csrf
                                         <div class="form-input">
                                           <label>* First Name:</label>
@@ -53,7 +53,7 @@
                                             <select id="date" name="date">
                                                   <option value="...">Day</option>
                                                   @foreach ($days as $day)
-                                                    <option value="{{ $day }}"{{ old('date', $student->date) == $day ? 'selected' : '' }}">{{ $day }}</option>
+                                                  <option value="{{ $day }}"{{ old('date', $student->date) == $day ? 'selected' : '' }}>{{ $day }}</option>
                                                 @endforeach
                                                   <!-- <option value="1">1</option>
                                                   <option value="2">2</option>
@@ -62,7 +62,7 @@
                                             <select id="month" name="month">
                                                   <option value="...">Month</option>
                                                   @foreach ($months as $month)
-                                                      <option value="{{ $month }}" {{ old('month', $student->month) == $month ? 'selected' : '' }}>{{ $month }}</option>
+                                                  <option value="{{ $month }}"{{ old('month', $student->month) == $month ? 'selected' : '' }}>{{ $month }}</option>
                                                   @endforeach
                                                   <!-- <option value="1">1</option>
                                                   <option value="2">2</option>
@@ -121,7 +121,7 @@
                                        <div class="form-input date licensenumber user password">
                                           <label>* Password:  </label>
                                           <!-- <input type="password" id ="licensenumber" name="licensenumber"> -->
-                                          <input type="password" id="password" name="password" value="{{ $student->password }}">
+                                          <input type="password" id="password" name="password" value="">
                                           <p>Password must be at least 6 characters,
                                               no more than 16 characters.</p>
                                               <span class = "text-danger">
@@ -134,7 +134,7 @@
                                        <div class="form-input date licensenumber user password confirm">
                                           <label>* Confirm password: </label>
                                           <!-- <input type="text" id ="licensenumber" name="licensenumber"> -->
-                                          <input type="password" id="password_confirmation" name="password_confirmation"  value="{{ $student->password_confirmation }}">
+                                          <input type="password" id="password_confirmation" name="password_confirmation"  value="">
                                           <span class = "text-danger">
                                           @error('password_confirmation')
                                                 {{$message}}
@@ -181,7 +181,7 @@
                                              <img src="{{ asset('asset/images/captcha.png') }}" />
                                         </div>
                                       <div class="btn"> <img src="{{ asset('asset/images/submiticon.png') }}" />
-                                      <input type="submit" value="SIGN UP"></div>
+                                      <input type="submit" value="Update"></div>
                                       <!-- <button type="submit">SIGN UP</button> -->
                                       <img class="mirrorimage" src="{{ asset('asset/images/btnmerror.png') }}" />
                                 </form>

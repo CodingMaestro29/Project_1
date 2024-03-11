@@ -1287,3 +1287,38 @@ span.text-danger {
    width: 100%;
 }
 }
+
+.alert.alert-danger{
+    color:red;
+    text-align:center ;
+}
+
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-danger hr {
+    border-top-color: #f1b0b7;
+}
+
+.alert-danger .alert-link {
+    color: #491217;
+}
+
+.alert-danger .alert-link:hover {
+    color: #491217;
+}
