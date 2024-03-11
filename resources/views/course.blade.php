@@ -79,7 +79,7 @@
                                           <label>* Password:  </label>
                                           <input type="password" id ="licensenumber" name="licensenumber">
                                           <p>Password must be at least 6 characters,
-                                              no more than 16 characters.</p>
+                                              no more than 16 characters.</p> 
                                        </div>
 
                                        <div class="form-input date licensenumber user password confirm">
@@ -103,7 +103,7 @@
                                                   <option value="xyz">xyz</option>
                                                   <option value="xyz">xyz</option>
                                                   <option value="xyz">xyz</option>
-                                            </select> 
+                                          </select> 
                                         </div>
                                        <div class="form-input zipcode">  
                                         <label>* Zip Code</label>  

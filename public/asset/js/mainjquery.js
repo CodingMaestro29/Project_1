@@ -1,10 +1,10 @@
 /*toggle*/
 document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.getElementById('navbar-toggle');
-    const menu = document.getElementById('navbar-menu');
-    const crossIcon = document.querySelector('.fas.fa-times');
+    const menu = document.getElementById('navbar-menu'); 
+    const crossIcon = document.querySelector('.fas.fa-times'); 
 
-    toggleButton.addEventListener('click', function() {
+    toggleButton.addEventListener('click', function() { 
         menu.classList.toggle('active');
         if (menu.classList.contains('active')) {
             crossIcon.style.display = 'block'; // Show the cross icon when menu is active
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const parent = this.parentElement;
             const isActive = parent.classList.contains('active');
 
-            // Close all items
+            // Close all items 
             faqQuestions.forEach(function (q) {
                 q.parentElement.classList.remove('active');
             });
