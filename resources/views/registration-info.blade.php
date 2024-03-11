@@ -4,6 +4,16 @@
 
 <div class="container">
           <h1 class="title">Student Registartion Information</h1>
+          @if(Session::has('success'))
+            <div class= "alert alert-success">
+                {{ Session::get('success') }}
+            </div>
+            @else
+            <div class= "alert alert-danger">
+                {{ Session::get('error') }}
+            </div>
+
+            @endif
                 <div class="student-dashboard-section">
                  <div class="contact">       
                     <p class="refund-policy">Your Personal Information <a class="edit" href="{{route('register.edit') }}">(edit)</a></p>

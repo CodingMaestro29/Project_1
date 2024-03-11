@@ -114,9 +114,12 @@ class AuthController extends Controller
          ]);
 
 
-         if(Auth::attempt($request->only('email','password'))){
+        // dd('test');
+         if(Auth::guard('student')->attempt($request->only('email','password'))){
+          //  dd('test1');
           return redirect('dashboard');
          }else{
+          //  dd('test2');
             return redirect('register')->withError('Error');
          }
 
@@ -130,12 +133,59 @@ class AuthController extends Controller
         $days = $this->getDays();
         $months = $this->getMonths();
         $years = $this->getYears();
-
+    
         $email = Auth::user()->email;
+    
+        $student = DB::table('students')->where('email', $email)->first();
 
-     $student = DB::table('students')->where('email', $email)->first();
+        return view('auth.course-edit', compact('days', 'months', 'years', 'student'));
+    }
+
+
+    public function register_update( Request $request)
+    {
+        try {
+        $days = $this->getDays();
+        $months = $this->getMonths();
+        $years = $this->getYears();
+    
+        $email = Auth::user()->email;
+    
+        $student = Student::where('email', $email)->first();
+
+        $student->update([
+            'fname' => $request->fname,
+            'mname' => $request->mname,
+            'lname' => $request->lname,
+            'email' => $request->email,
+            'date' => $request->date,
+            'month' => $request->month,
+            'years' => $request->years,
+            'number11' => $request->number11,
+            'number12' => $request->number12,
+            'number13' => $request->number13,
+            'licenseState' => $request->licenseState,
+            'licensenumber' => $request->licensenumber,
+            'username' => $request->username,
+            'password' => bcrypt($request->password),
+            'password_confirmation' => bcrypt($request->password),
+            'address' => $request->address,
+            'city' => $request->city,
+            'states' => $request->states,
+            'zipcode' => $request->zipcode,
+            'find' => $request->find,
+        ]);
+
+
+        return redirect()->route('student.registration')->with('success','student 
+        edited successfully');
+
+    } catch (\Exception $e) {
+        return redirect()->route('student.registration')->with('error', 'Failed to update student. Please try again.');
+    }
+
         
-        return view('auth.course',  compact('days', 'months', 'years') , ['student'=>$student]);
+        
     }
 
 
