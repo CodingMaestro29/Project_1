@@ -30,7 +30,7 @@ class AuthController extends Controller
         'email' => 'required|email',
           'password' => 'required',
         ]);
-
+            dd($request->only('email','password'));
 
         if(Auth::guard('student')->attempt($request->only('email','password'))){
           //  dd('test1');
