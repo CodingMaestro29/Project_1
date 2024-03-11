@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+
     padding: 0;
 }
 img {
@@ -570,6 +571,7 @@ p.tetimonial-content {
     position: relative;
     border: 4px solid rgba(255, 255, 255, 1);
     box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.15);
+    outline: none;
 }
 .sign-up a:before {
     position: absolute;
@@ -919,13 +921,13 @@ p.subtitle {
     font-size: 12px;
     font-weight: 600;
     line-height: 16px;
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", sans-serif;  
     text-decoration: none;
     color: rgb(93 153 234);
     border-radius: 10px;
     text-align: center;
     border: 2px solid rgb(95 159 235);
-
+   outline: none !important;
 }
 a.get-certificate {
     font-size: 20px;
