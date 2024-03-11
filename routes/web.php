@@ -76,6 +76,9 @@ Route::group(['middleware'=>'auth:student'],function(){
 Route::get('dashboard',[DashboardController::class , 'index'])
 ->name('dashboard.index');
 
+Route::get('/register-edit',[AuthController::class , ' register_edit'])
+->name('register.edit');
+
 Route::get('/student-info',[DashboardController::class , 'registration_info'])
 ->name('student.registration');
 

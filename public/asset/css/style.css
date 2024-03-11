@@ -199,7 +199,7 @@ form.registration-form label {
 form.registration-form input {
     border: 1px solid rgba(221, 221, 221, 1);
     padding: 10px;
-    margin-bottom: 10px;
+    margin-top: 10px;
     width: 218px;
     border-radius: 3px;
     margin-left: 8px;
@@ -217,8 +217,11 @@ form.registration-form input#mname {
 form.registration-form input#Phone {
     width: 45px;
 }
+form.registration-form input#Phone11 {
+    width: 45px;
+}
 form.registration-form input#Phones {
-    width: 75px;
+    width: 60px;
 }
 .border-line:before {
     position: absolute;
@@ -234,6 +237,7 @@ form.registration-form input#Phones {
 .form-input.date {
     margin-left: -17px;
     padding-bottom: 35px;
+    margin-top: 10px;
 }
 form.registration-form select {
     border: 1px solid rgba(221, 221, 221, 1);
@@ -306,6 +310,7 @@ input#licensenumber {
 }
 .form-input.states {
     margin-left: 43px;
+    margin-top: 10px;
 }
 .form-input.zipcode {
     margin-left: 18px;
@@ -350,7 +355,7 @@ select#find {
     height: auto;
     margin-top: 50px;
 }
-.btn input[type="button"] {
+/* .btn input[type="button"] {
     font-weight: 600;
     font-size: 18px;
     color: rgba(255, 255, 255, 1);
@@ -361,6 +366,21 @@ select#find {
     padding: 17px !important;
     margin-top: 35px;
     width: 146px;
+    text-align: right;
+    margin-left: 0 !important;
+} */
+
+.btn input[type="submit"] {
+    font-weight: 600;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 1);
+    line-height: 19px;
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(180deg, #D90000 10.34%, #DB4646 37.93%, #B90000 81.03%);
+    border-radius: 7px !important;
+    padding: 17px !important;
+    margin-top: 35px;
+    width: 146px !important;
     text-align: right;
     margin-left: 0 !important;
 }
@@ -487,7 +507,33 @@ img.totalcartimg {
 .main-page-section {
     padding: 0 20px;
 }
+form.registration-form span.text-danger {
+    color: red;
+    display: block;
+    /* margin-bottom: 15px; */
+    margin-left: 100px;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
+.form-input.email span.text-danger {
+    margin-left: 62px;
+}
+.form-input.date.licensenumber span.text-danger {
+    margin-left: 193px;
+}
 
+.form-input.date.licensenumber.user span.text-danger {
+    margin-left: 102px;
+}
+
+.form-input.date.licensenumber.user.password span.text-danger {
+    margin-left: 90px;
+}
+
+.form-input.date.licensenumber.user.password.confirm span.text-danger {
+    margin-left: 150px;
+}
 /*testimonial*/
 .testimonil-section {
     display: flex;
@@ -628,7 +674,6 @@ h2.faq-question {
     gap: 20px;
     align-items: center;
 }
-
 /*about us*/
 .about-us-section {
     display: flex;
@@ -697,7 +742,7 @@ p.privacy-policy {
 }
 ul.listing {
     padding-left: 14px;
-}
+} 
 ul.listing li {
     font-size: 14px;
     font-weight: 400;
@@ -721,7 +766,6 @@ p.refund-policy {
 p.about-description.terms.left {
     padding-left: 20px;
 }
-
 /*login*/
 .student-login {
     width: 320px;
@@ -818,7 +862,32 @@ a.forget-user-name {
     display: block;
     text-align: center;
 }
-.submit-btn input[type="button"] {
+/* .submit-btn input[type="button"] {
+    background: rgba(27, 188, 155, 1);
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+    font-weight: 800;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: "Inter", sans-serif;
+    width: 150px;
+    padding: 10px 10px 26px 10px;
+} */
+p.subtitle {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Inter", sans-serif;
+}
+.submit-btn {
+    position: relative;
+}
+.submit-btn button {
     background: rgba(27, 188, 155, 1);
     font-size: 14px;
     color: #fff;
@@ -832,18 +901,6 @@ a.forget-user-name {
     padding: 10px 10px 26px 10px;
 }
 p.subtitle {
-    margin: 0;
-    font-size: 10px;
-    font-weight: 800;
-    line-height: 20px;
-    text-align: center;
-    color: rgba(255, 255, 255, 1);
-     font-family: "Inter", sans-serif;
-}
-.submit-btn {
-    position: relative;
-}
-p.subtitle {
     position: absolute;
     top: 30px;
     left: 0;
@@ -851,9 +908,9 @@ p.subtitle {
 }
 /*student Dashboard*/
 .student-dashboard-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px; 
 }
 .dashboard-tabs a {
     display: block;
@@ -1022,7 +1079,7 @@ p.about-description {
     height: auto;
 }
 .about-us-section {
-    display: block;
+    display: block;    
 }
 .contact.-us-section {
     display: block;
@@ -1109,7 +1166,6 @@ select#find {
     margin-left: 0px;
 }
     form.registration-form input#mname {
-    
     margin-left: 0px;
 }
     form.registration-form input {
@@ -1181,7 +1237,7 @@ select#statse {
 }
 .form-input.zipcode input {
     width: 100%;
-        margin-top: 10px;
+    margin-top: 10px;
 }
 select#find {
    width: 100%;
@@ -1198,11 +1254,28 @@ select#years {
 .form-input.numbers {
     margin-left: 0;
 }
-.form-input.date {
+.form-input.date { 
     margin-left: 0;
 }
+span.text-danger {
+    margin-left: 0px !important;
 }
-
+.form-input.email span.text-danger {
+    margin-left: 0px;
+}
+.form-input.date.licensenumber span.text-danger {
+    margin-left: 0px;
+}
+.form-input.date.licensenumber.user span.text-danger {
+    margin-left: 0px;
+}
+.form-input.date.licensenumber.user.password span.text-danger {
+    margin-left: 0px;
+}
+.form-input.date.licensenumber.user.password.confirm span.text-danger {
+    margin-left: 0px;
+}
+}   
 @media (max-width: 359px){
   .student-login {
     width: 100%;
@@ -1213,9 +1286,4 @@ select#years {
 .order-summary-section {
    width: 100%;
 }
-}
-
-.alert.alert-danger{
-    color:red;
-    Text-align: center
 }

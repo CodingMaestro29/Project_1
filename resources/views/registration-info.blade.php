@@ -6,7 +6,7 @@
           <h1 class="title">Student Registartion Information</h1>
                 <div class="student-dashboard-section">
                  <div class="contact">       
-                    <p class="refund-policy">Your Personal Information <a class="edit" href="#">(edit)</a></p>
+                    <p class="refund-policy">Your Personal Information <a class="edit" href="{{route('register.edit') }}">(edit)</a></p>
                     <div class="student-information">                           
                       <div class="student-regis-info">
                         <h4>Your email:</h4> 

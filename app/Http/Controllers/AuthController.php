@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\DB;
 
 
 use App\Models\Student;
@@ -59,7 +60,7 @@ class AuthController extends Controller
 
     public function getYears()
     {
-        return range(1940, 2080);
+        return range(1930, 2080);
     }
 
 
@@ -120,6 +121,21 @@ class AuthController extends Controller
          }
 
        
+    }
+
+
+
+    public function register_edit()
+    {
+        $days = $this->getDays();
+        $months = $this->getMonths();
+        $years = $this->getYears();
+
+        $email = Auth::user()->email;
+
+     $student = DB::table('students')->where('email', $email)->first();
+        
+        return view('auth.course',  compact('days', 'months', 'years') , ['student'=>$student]);
     }
 
 
