@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const menu = document.getElementById('navbar-menu'); 
     const crossIcon = document.querySelector('.fas.fa-times'); 
 
-    toggleButton.addEventListener('click', function() { 
-        menu.classList.toggle('active');
+    toggleButton.addEventListener('click', function() {
+        menu.classList.toggle('active'); 
         if (menu.classList.contains('active')) {
             crossIcon.style.display = 'block'; // Show the cross icon when menu is active
             toggleButton.style.display = 'none'; // Hide the toggle icon

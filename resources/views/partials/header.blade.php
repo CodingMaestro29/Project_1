@@ -56,7 +56,7 @@
                                   <li><a href="{{route('faq.index') }}">faq</a></li>
                                   <li><a href="{{route('about.index') }}">about us</a></li>
                                   <li><a href="{{route('contact.index') }}">Contact us</a></li>
-                                  <li class="star"><a href="{{route('auth.index') }}"><img class="star" src="{{ asset('asset/images/star.png') }}" /> student login</a></li>
+                                  <li class="star"><a href="{{route('login') }}"><img class="star" src="{{ asset('asset/images/star.png') }}" /> student login</a></li>
                               </ul>
                             </nav> 
                    </div> 

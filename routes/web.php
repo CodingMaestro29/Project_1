@@ -12,6 +12,8 @@ use App\Http\Controllers\StudentLoginController;
 use App\Http\Controllers\TermsConditionsController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
+
 
 
 
@@ -27,7 +29,8 @@ use App\Http\Controllers\AuthController;
 */
 
 Route::get('/', function () {
-    return view('auth.course');
+  //  return view('auth.course');
+  return redirect()->route('auth.register_view');
 });
 
 
@@ -41,13 +44,15 @@ Route::get('/contact-us',[ContactController::class , 'index'])
 // Route::get('/course',[CourseController::class , 'index'])
 // ->name('course.index');
 
-Route::get('/login',[AuthController::class , 'index'])
- ->name('auth.index');
+Route::get('login',[AuthController::class , 'index'])
+ ->name('login');
 
- Route::post('/login',[AuthController::class , 'login'])
+ Route::post('login',[AuthController::class , 'login'])
  ->name('auth.login');
 
- Route::get('/register',[AuthController::class , 'register_view'])
+ 
+
+ Route::get('register',[AuthController::class , 'register_view'])
  ->name('auth.register_view');
 
  Route::post('/register', [AuthController::class, 'register'])
@@ -66,9 +71,24 @@ Route::get('/privacy-policy',[PrivacyController::class , 'index'])
 Route::get('/how-it-works',[HowItWorksController::class , 'index'])
 ->name('works.index');
 
+Route::group(['middleware'=>'auth:student'],function(){
 
-// Route::get('/student-login',[StudentLoginController::class , 'index'])
-// ->name('login.index');
+Route::get('dashboard',[DashboardController::class , 'index'])
+->name('dashboard.index');
+
+Route::get('/register-edit',[AuthController::class , ' register_edit'])
+->name('register.edit');
+
+Route::get('/student-info',[DashboardController::class , 'registration_info'])
+->name('student.registration');
+
+Route::get('/student-table',[DashboardController::class , 'student_table'])
+->name('student.table');
+
+Route::get('logout',[AuthController::class , 'logout'])
+ ->name('auth.logout');
+
+});
 
 Route::get('/terms-conditions',[TermsConditionsController::class , 'index'])
 ->name('terms.index');
