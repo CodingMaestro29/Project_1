@@ -176,9 +176,15 @@
                                             </select> 
                                             <p>How did you find our website?</p>
                                         </div>
-                                        <div class="form-input captcha">  
-                                             <img src="{{ asset('asset/images/captcha.png') }}" />
-                                        </div>
+                                        <div class="form-input captcha"> 
+                                        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                                             <!-- <img src="{{ asset('asset/images/captcha.png') }}" /> -->
+                                             <div class="g-recaptcha" data-sitekey="6Lfv75QpAAAAAEYsclEvPz89cF11XpMI_5tcrdWW"
+                                             data-callback='onSubmit'
+                                             </div>
+                                              <br/>
+                                              <input type="submit" value="Submit">
+                                                                                  </div>
                                       <div class="btn"> <img src="{{ asset('asset/images/submiticon.png') }}" />
                                       <input type="submit" value="SIGN UP"></div>
                                       <!-- <button type="submit">SIGN UP</button> -->
