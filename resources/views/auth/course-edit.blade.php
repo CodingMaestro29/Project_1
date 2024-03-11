@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-            <h1 class="title">Registration Information</h1>
+            <h1 class="title">Edit Registration Information</h1>
         <div class="main-section">    
                             <div class="form-section">    
                                 <h3 class="login-title">Create Your Login</h3>

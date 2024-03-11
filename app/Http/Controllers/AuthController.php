@@ -86,6 +86,7 @@ class AuthController extends Controller
             'username' => 'required|min:4|max:36',
             'password' => 'required|min:6|max:18|confirmed',
             'password_confirmation' => 'required',
+            'g-recaptcha-response' => 'required|recaptchav3:contact-us,0.5'
             
          ]);
 
@@ -193,7 +194,7 @@ class AuthController extends Controller
     {
         Session::flush();
         Auth::logout();
-        return redirect('register');
+        return redirect('login');
     }
 
 
