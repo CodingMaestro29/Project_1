@@ -33,7 +33,7 @@
                       </div> 
                       <div class="student-regis-info">
                         <h4>Your phone:</h4> 
-                        <span>800) 555‑0175</span>
+                        <span>{{ $student->number11 ." ".$student->number12." ".$student->number13 }}</span>
                       </div> 
                       <div class="student-regis-info">
                         <h4>Your driver's license:</h4> 

@@ -12,7 +12,7 @@
                  </div>
 
                  <div class="sign-up">
-                    <a href="#"><img class="arrow" src="{{ asset('asset/images/arrow.png') }}" /> sign up</a>
+                    <a href="{{route('auth.register_view') }}"><img class="arrow" src="{{ asset('asset/images/arrow.png') }}" /> sign up</a>
                  </div>   
                </div>
          </div>   
