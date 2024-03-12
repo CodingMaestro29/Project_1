@@ -180,7 +180,7 @@
                                         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                                              <!-- <img src="{{ asset('asset/images/captcha.png') }}" /> -->
                                              
-                                             <div class="g-recaptcha" name="g-token" data-sitekey="6Lfv75QpAAAAAEYsclEvPz89cF11XpMI_5tcrdWW">
+                                             <div class="g-recaptcha" data-name="g-token" data-sitekey="6LfDy5UpAAAAAN_NSCsjv6cZxYVaOYKxK8Lk54Oy">
                                              
                                              </div>
                                              <span class="text-success">{{ session('success_message') }}</span>
@@ -223,11 +223,7 @@
          </div> 
          
          
-         <script>
-    function onSubmit(token) {
-        document.getElementById("recaptchaToken").value = token;
-    }
-</script>
+        
 
 
 

@@ -20,7 +20,7 @@ return [
      * get site key @ www.google.com/recaptcha/admin
      *
      */
-    'api_site_key'                 => env('RECAPTCHA_SITE_KEY', '6Lfv75QpAAAAAEYsclEvPz89cF11XpMI_5tcrdWW'),
+    'api_site_key'                 => env('RECAPTCHA_SITE_KEY', '6LfDy5UpAAAAAN_NSCsjv6cZxYVaOYKxK8Lk54Oy'),
 
     /**
      *
@@ -28,7 +28,7 @@ return [
      * get secret key @ www.google.com/recaptcha/admin
      *
      */
-    'api_secret_key'               => env('RECAPTCHA_SECRET_KEY', '6Lfv75QpAAAAAPvKBfBEomkXesAClBRvo2SkGuoJ'),
+    'api_secret_key'               => env('RECAPTCHA_SECRET_KEY', '6LfDy5UpAAAAAKieujPA6f9WCCLrbtgdIFKIoev0'),
 
     /**
      *
