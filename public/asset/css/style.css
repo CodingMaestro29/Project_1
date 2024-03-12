@@ -1289,7 +1289,8 @@ span.text-danger {
    width: 100%;  
 }
 }
-.alert.alert-danger{
+
+.text-danger{
     color:red;
     text-align:center ;
 }

@@ -85,9 +85,27 @@ class AuthController extends Controller
             'username' => 'required|min:4|max:36',
             'password' => 'required|min:6|max:18|confirmed',
             'password_confirmation' => 'required',
-            'g-token' => 'required',
-            
          ]);
+         $input = $request->all();
+
+         $recaptcha =  $input['g-recaptcha-response']; 
+
+         $secret_key = '6Lfv75QpAAAAAPvKBfBEomkXesAClBRvo2SkGuoJ'; 
+
+         $url = 'https://www.google.com/recaptcha/api/siteverify?secret='
+          . $secret_key . '&response=' . $recaptcha; 
+
+          $response = file_get_contents($url); 
+
+          $response = json_decode($response); 
+
+        //  dd($response);
+
+          if ($response->success == true) { 
+            session(['success_message' => 'Google reCAPTCHA verified']);
+        } else { 
+             return redirect()->back()->withErrors(['g-token' => 'Error in Google reCAPTCHA']);
+        } 
 
 
          Student::create([

@@ -179,11 +179,13 @@
                                         <div class="form-input captcha">
                                         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                                              <!-- <img src="{{ asset('asset/images/captcha.png') }}" /> -->
-                                             <input type="hidden" name="g-token" id="recaptchaToken">
-                                             <div class="g-recaptcha" data-sitekey="6Lfv75QpAAAAAEYsclEvPz89cF11XpMI_5tcrdWW"
-                                             data-callback='onSubmit'
-                                             data-action='submit'>Submit</div>
+                                             
+                                             <div class="g-recaptcha" name="g-token" data-sitekey="6Lfv75QpAAAAAEYsclEvPz89cF11XpMI_5tcrdWW">
+                                             
+                                             </div>
+                                             <span class="text-success">{{ session('success_message') }}</span>
                                              <span class="text-danger">{{ $errors->first('g-token') }}</span>
+                                            
                                           </div>
                                       <div class="btn"> <img src="{{ asset('asset/images/submiticon.png') }}" />
                                       <input type="submit" value="SIGN UP"></div>
