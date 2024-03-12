@@ -2,6 +2,10 @@
 
 @section('content')
 
+<script src= 
+        "https://www.google.com/recaptcha/api.js" async defer> 
+    </script> 
+
 <div class="container">
             <h1 class="title">Registration Information</h1>
         <div class="main-section">    
