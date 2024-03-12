@@ -2,6 +2,10 @@
 
 @section('content')
 
+<script src= 
+        "https://www.google.com/recaptcha/api.js" async defer> 
+    </script> 
+
 <div class="container">
             <h1 class="title">Registration Information</h1>
         <div class="main-section">    
@@ -42,9 +46,9 @@
                                         </div> 
                                         <div class="form-input numbers">
                                           <label>* Phone Number:</label>
-                                          <input type="number" id ="Phone" name="number11">
-                                          <input type="number" id ="Phone11" name="number12">
-                                          <input type="number" id ="Phones" name="number13">
+                                          <input type="text" id ="Phone" name="number11" maxlength="3" pattern="\d{3}">
+                                          <input type="text" id ="Phone11" name="number12" maxlength="4" pattern="\d{4}">
+                                          <input type="text" id ="Phones" name="number13"  maxlength="4" pattern="\d{4}">
                                        </div>   
 
                                        <div class="form-input date">
@@ -180,7 +184,7 @@
                                         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                                              <!-- <img src="{{ asset('asset/images/captcha.png') }}" /> -->
                                              
-                                             <div class="g-recaptcha" name="g-token" data-sitekey="6Lfv75QpAAAAAEYsclEvPz89cF11XpMI_5tcrdWW">
+                                             <div class="g-recaptcha" data-name="g-token" data-sitekey="6LfDy5UpAAAAAN_NSCsjv6cZxYVaOYKxK8Lk54Oy">
                                              
                                              </div>
                                              <span class="text-success">{{ session('success_message') }}</span>
@@ -221,13 +225,50 @@
                 </div>
            </div>
          </div> 
-         
-         
+
+
+
+
+
          <script>
-    function onSubmit(token) {
-        document.getElementById("recaptchaToken").value = token;
-    }
-</script>
+           const settings = {
+                async: true,
+                crossDomain: true,
+                url: 'https://us-states.p.rapidapi.com/basic',
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': 'b19cbff30emsha5dbbdb1687b214p1df0fdjsn3d4b283d61aa',
+                    'X-RapidAPI-Host': 'us-states.p.rapidapi.com'
+                }
+            };
+
+            $.ajax(settings).done(function (response) {
+              //  console.log(response);
+              const dropdown = $('#statse');
+
+              const dropdown11 = $('#license');
+
+        
+        dropdown.empty();
+        dropdown11.empty();
+
+        // Add a default option
+        dropdown.append($('<option>').val('...').text('...'));
+        dropdown11.append($('<option>').val('...').text('...'));
+
+        // Iterate over the response and add options to the dropdown
+        $.each(response, function (index, state) {
+            dropdown.append($('<option>').val(state.postal).text(state.name));
+        });
+
+        $.each(response, function (index, state) {
+            dropdown11.append($('<option>').val(state.postal).text(state.postal));
+        });
+            });
+     </script>
+         
+         
+        
 
 
 

@@ -1292,7 +1292,7 @@ span.text-danger {
 
 .text-danger{
     color:red;
-    text-align:center ;
+    text-align:left ;
 }
 .alert-success {
     color: #155724;

@@ -26,7 +26,7 @@
                                <a href="#" class="forget-user-name">Forgot User Name?</a>
                             </div>
                             <div class="submit-btn">
-                              <!-- <input type="button"  value="SECURE LOGIN "> -->
+                              <!-- <input type="submit"  value="SECURE LOGIN "> -->
                               <button type="submit">SECURE LOGIN</button>
                               <p class="subtitle">CLICK HERE TO RE-ENTER</p>
                             </div>

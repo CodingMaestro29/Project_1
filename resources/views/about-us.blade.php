@@ -13,7 +13,7 @@
                      <p class="about-description">Our phone number is nationwide at <a href="tel:800-574-5643">800-574-5643.</a> My name is Terry Haggin, and I am the builder, designer, and owner of Over 55 Mature Driver Course. If you need to contact me anytime, my personal email address is <a class="emails" href="mailto:terryhaggin@gmail.com">terryhaggin@gmail.com.</a> Please choose our company over the others; you will be glad that you did.</p>
                  </div>
                  <div class="sign-up">
-                    <a href="#"><img class="arrow" src="asset('asset/images/arrow.png') }}" /> sign up</a>
+                    <a href="{{route('auth.register_view') }}"><img class="arrow" src="{{ asset('asset/images/arrow.png') }}" /> sign up</a>
                  </div>   
                </div>
          </div>   
