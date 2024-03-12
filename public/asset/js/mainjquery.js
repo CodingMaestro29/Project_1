@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleButton.style.display = 'block'; // Show the toggle icon
         }
     }); 
-
-    crossIcon.addEventListener('click', function() {
-        menu.classList.remove('active');
-        crossIcon.style.display = 'none'; // Hide the cross icon when menu is closed
-        toggleButton.style.display = 'block'; // Show the toggle icon 
+   
+    crossIcon.addEventListener('click', function() { 
+        menu.classList.remove('active');  
+        crossIcon.style.display = 'none'; // Hide the cross icon when menu is closed 
+        toggleButton.style.display = 'block'; // Show the toggle icon  
     });
 
     toggleButton.addEventListener('click', function() {
@@ -52,10 +52,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const isActive = parent.classList.contains('active');
 
             // Close all items 
-            faqQuestions.forEach(function (q) {
-                q.parentElement.classList.remove('active');
-            });
-
+            faqQuestions.forEach(function (q) { 
+                q.parentElement.classList.remove('active'); 
+            });   
+ 
             // Open only the clicked item if it wasn't already open
             if (!isActive) {
                 parent.classList.add('active');

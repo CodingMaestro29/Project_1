@@ -938,7 +938,8 @@ a.get-certificate {
     font-family: "Inter", sans-serif;
     text-decoration: none;
     text-transform: capitalize;
-}
+    outline: none; 
+}    
 /*close*/
 /*student registartion information*/
 .student-regis-info {
@@ -971,6 +972,7 @@ a.get-certificate {
 a.edit {
     text-decoration: none;
 }
+
 /*close*/ 
 
 /*Mobile Responsive*/
@@ -1061,8 +1063,7 @@ ul.listing li {
 p.about-description {
     width: 100%;
 }
-}
-
+}    
 @media (max-width:767px){
     .dashboard-tabs a {
     width: 165px;
@@ -1120,7 +1121,7 @@ form.registration-form input {
      width: 150px; 
 }
 form.registration-form input#Phone {
-    width: 30px;
+    width: 30px;   
 }
 form.registration-form input#Phones {
     width: 40px;
@@ -1168,10 +1169,10 @@ select#find {
     margin-left: 0px;
 }
     form.registration-form input#mname {
-    margin-left: 0px;
+    margin-left: 0px; 
 }
     form.registration-form input {
-    margin-left: 0px;
+    margin-left: 0px; 
 }
     .form-input.date.licensenumber.user.password p {
     margin-left: 0px;
@@ -1232,17 +1233,17 @@ select#statse {
     margin-left: 0px;
 }
 .form-input.address {
-    margin-left: 0px;
+    margin-left: 0px; 
 }
-.form-input.zipcode {
+.form-input.zipcode {    
     margin-left: 0;
-}
-.form-input.zipcode input {
+} 
+.form-input.zipcode input {   
     width: 100%;
-    margin-top: 10px;
+    margin-top: 10px; 
 }
-select#find {
-   width: 100%;
+select#find {  
+   width: 100%; 
 }
 form.registration-form input#Phone {
     width: 30px;
@@ -1258,24 +1259,24 @@ select#years {
 }
 .form-input.date { 
     margin-left: 0;
-}
+}   
 span.text-danger {
-    margin-left: 0px !important;
+    margin-left: 0px !important; 
 }
-.form-input.email span.text-danger {
-    margin-left: 0px;
+.form-input.email span.text-danger {                                            
+    margin-left: 0px;                                                                                        
 }
-.form-input.date.licensenumber span.text-danger {
-    margin-left: 0px;
+.form-input.date.licensenumber span.text-danger {   
+    margin-left: 0px; 
 }
-.form-input.date.licensenumber.user span.text-danger {
+.form-input.date.licensenumber.user span.text-danger { 
     margin-left: 0px;
 }
 .form-input.date.licensenumber.user.password span.text-danger {
     margin-left: 0px;
-}
+} 
 .form-input.date.licensenumber.user.password.confirm span.text-danger {
-    margin-left: 0px;
+    margin-left: 0px;   
 }
 }   
 @media (max-width: 359px){
@@ -1283,7 +1284,7 @@ span.text-danger {
     width: 100%;
 }
 .student-login img {
-   width: 100%;
+   width: 100%;  
 }
 .order-summary-section {
    width: 100%;  
