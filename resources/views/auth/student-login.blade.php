@@ -10,7 +10,7 @@
                     <div class="student-login">  
                     <p class="login-title">Student Login</p>
                     @if ($errors->has('login'))
-                      <div class="alert alert-danger"><p>
+                      <div class="text-danger"><p>
                           {{ $errors->first('login') }}
                      </p></div>
                          @endif
@@ -21,7 +21,7 @@
                               <label>Login User Name</label>
                               <input type="text" id="loginuser" name="email">
                               @error('email')
-                                <div class="alert alert-danger">{{ $message }}</div>
+                                <div class="text-danger">{{ $message }}</div>
                                   @enderror
                           </div>
 
@@ -29,7 +29,7 @@
                               <label>Password</label>
                               <input type="Password" id="Password" name="password">
                               @error('password')
-                              <div class="alert alert-danger">{{ $message }}</div>
+                              <div class="text-danger">{{ $message }}</div>
                                @enderror
                           </div>
                           <div class="main-div-user">
