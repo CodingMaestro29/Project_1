@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+
     padding: 0;
 }
 img {
@@ -199,7 +200,7 @@ form.registration-form label {
 form.registration-form input {
     border: 1px solid rgba(221, 221, 221, 1);
     padding: 10px;
-    margin-bottom: 10px;
+    margin-top: 10px;
     width: 218px;
     border-radius: 3px;
     margin-left: 8px;
@@ -217,8 +218,11 @@ form.registration-form input#mname {
 form.registration-form input#Phone {
     width: 45px;
 }
+form.registration-form input#Phone11 {
+    width: 45px;
+}
 form.registration-form input#Phones {
-    width: 75px;
+    width: 60px;
 }
 .border-line:before {
     position: absolute;
@@ -234,6 +238,7 @@ form.registration-form input#Phones {
 .form-input.date {
     margin-left: -17px;
     padding-bottom: 35px;
+    margin-top: 10px;
 }
 form.registration-form select {
     border: 1px solid rgba(221, 221, 221, 1);
@@ -306,6 +311,7 @@ input#licensenumber {
 }
 .form-input.states {
     margin-left: 43px;
+    margin-top: 10px;
 }
 .form-input.zipcode {
     margin-left: 18px;
@@ -350,7 +356,7 @@ select#find {
     height: auto;
     margin-top: 50px;
 }
-.btn input[type="button"] {
+/* .btn input[type="button"] {
     font-weight: 600;
     font-size: 18px;
     color: rgba(255, 255, 255, 1);
@@ -361,6 +367,21 @@ select#find {
     padding: 17px !important;
     margin-top: 35px;
     width: 146px;
+    text-align: right;
+    margin-left: 0 !important;
+} */
+
+.btn input[type="submit"] {
+    font-weight: 600;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 1);
+    line-height: 19px;
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(180deg, #D90000 10.34%, #DB4646 37.93%, #B90000 81.03%);
+    border-radius: 7px !important;
+    padding: 17px !important;
+    margin-top: 35px;
+    width: 146px !important;
     text-align: right;
     margin-left: 0 !important;
 }
@@ -487,7 +508,33 @@ img.totalcartimg {
 .main-page-section {
     padding: 0 20px;
 }
+form.registration-form span.text-danger {
+    color: red;
+    display: block;
+    /* margin-bottom: 15px; */
+    margin-left: 100px;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
+.form-input.email span.text-danger {
+    margin-left: 62px;
+}
+.form-input.date.licensenumber span.text-danger {
+    margin-left: 193px;
+}
 
+.form-input.date.licensenumber.user span.text-danger {
+    margin-left: 102px;
+}
+
+.form-input.date.licensenumber.user.password span.text-danger {
+    margin-left: 90px;
+}
+
+.form-input.date.licensenumber.user.password.confirm span.text-danger {
+    margin-left: 150px;
+}
 /*testimonial*/
 .testimonil-section {
     display: flex;
@@ -524,6 +571,7 @@ p.tetimonial-content {
     position: relative;
     border: 4px solid rgba(255, 255, 255, 1);
     box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.15);
+    outline: none;
 }
 .sign-up a:before {
     position: absolute;
@@ -628,7 +676,6 @@ h2.faq-question {
     gap: 20px;
     align-items: center;
 }
-
 /*about us*/
 .about-us-section {
     display: flex;
@@ -697,7 +744,7 @@ p.privacy-policy {
 }
 ul.listing {
     padding-left: 14px;
-}
+} 
 ul.listing li {
     font-size: 14px;
     font-weight: 400;
@@ -721,7 +768,6 @@ p.refund-policy {
 p.about-description.terms.left {
     padding-left: 20px;
 }
-
 /*login*/
 .student-login {
     width: 320px;
@@ -818,7 +864,32 @@ a.forget-user-name {
     display: block;
     text-align: center;
 }
-.submit-btn input[type="button"] {
+/* .submit-btn input[type="button"] {
+    background: rgba(27, 188, 155, 1);
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+    font-weight: 800;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: "Inter", sans-serif;
+    width: 150px;
+    padding: 10px 10px 26px 10px;
+} */
+p.subtitle {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Inter", sans-serif;
+}
+.submit-btn {
+    position: relative;
+}
+.submit-btn button {
     background: rgba(27, 188, 155, 1);
     font-size: 14px;
     color: #fff;
@@ -832,18 +903,6 @@ a.forget-user-name {
     padding: 10px 10px 26px 10px;
 }
 p.subtitle {
-    margin: 0;
-    font-size: 10px;
-    font-weight: 800;
-    line-height: 20px;
-    text-align: center;
-    color: rgba(255, 255, 255, 1);
-     font-family: "Inter", sans-serif;
-}
-.submit-btn {
-    position: relative;
-}
-p.subtitle {
     position: absolute;
     top: 30px;
     left: 0;
@@ -851,9 +910,9 @@ p.subtitle {
 }
 /*student Dashboard*/
 .student-dashboard-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px; 
 }
 .dashboard-tabs a {
     display: block;
@@ -862,13 +921,13 @@ p.subtitle {
     font-size: 12px;
     font-weight: 600;
     line-height: 16px;
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", sans-serif;  
     text-decoration: none;
     color: rgb(93 153 234);
     border-radius: 10px;
-    text-align: center; 
+    text-align: center;
     border: 2px solid rgb(95 159 235);
-    outline: none !important;
+   outline: none !important;
 }
 .dashboard-tabs.payment a {
     width: 100px;
@@ -882,7 +941,8 @@ a.get-certificate {
     font-family: "Inter", sans-serif;
     text-decoration: none;
     text-transform: capitalize;
-}
+    outline: none; 
+}    
 /*close*/
 /*student registartion information*/
 .student-regis-info {
@@ -916,6 +976,7 @@ a.edit {
     text-decoration: none;
 }
 /*close*/ 
+
 
 /*payment-gateway*/
 .paypal-payment {
@@ -1006,7 +1067,6 @@ a.edit {
 /*close*/
 
 
-
 /*Mobile Responsive*/
 @media (max-width:900px) and (min-width: 768px){
     .order-summary-section {
@@ -1079,7 +1139,7 @@ div#navbar-toggle {
 .top-right-image {
     display: none;
 }
-.faq-item {
+.faq-item { 
     width: 100%;
 }
 .sign-up {
@@ -1096,14 +1156,13 @@ p.about-description {
     width: 100%;
 }
 .payments {
-       width: 100%;
+    width: 100%;
 }
-}
-
+}    
 @media (max-width:767px){
-.payments {
-       width: 100%;
-}
+    .payments {
+        width: 100%;
+ }
     .dashboard-tabs a {
     width: 165px;
 }
@@ -1160,7 +1219,7 @@ form.registration-form input {
      width: 150px; 
 }
 form.registration-form input#Phone {
-    width: 30px;
+    width: 30px;   
 }
 form.registration-form input#Phones {
     width: 40px;
@@ -1185,8 +1244,8 @@ select#find {
 
 @media (max-width:450px){
     .payment-input input[type="text"] {
-    width: 100px;
-}
+        width: 100px;
+    }
     .student-regis-info {
     display: block;
 }
@@ -1214,10 +1273,10 @@ select#find {
     margin-left: 0px;
 }
     form.registration-form input#mname {
-    margin-left: 0px;
+    margin-left: 0px; 
 }
     form.registration-form input {
-    margin-left: 0px;
+    margin-left: 0px; 
 }
     .form-input.date.licensenumber.user.password p {
     margin-left: 0px;
@@ -1243,7 +1302,7 @@ form.registration-form input#mname {
 }
 select#license {
     width: 100%;
-        margin-top: 10px;
+    margin-top: 10px;
 }
 input#licensenumber {
     width: 100%;
@@ -1278,17 +1337,17 @@ select#statse {
     margin-left: 0px;
 }
 .form-input.address {
-    margin-left: 0px;
+    margin-left: 0px; 
 }
-.form-input.zipcode {
+.form-input.zipcode {    
     margin-left: 0;
-}
-.form-input.zipcode input {
+} 
+.form-input.zipcode input {   
     width: 100%;
-        margin-top: 10px;
+    margin-top: 10px; 
 }
-select#find {
-   width: 100%;
+select#find {  
+   width: 100%; 
 }
 form.registration-form input#Phone {
     width: 30px;
@@ -1302,62 +1361,64 @@ select#years {
 .form-input.numbers {
     margin-left: 0;
 }
-.form-input.date {
+.form-input.date { 
     margin-left: 0;
+}   
+span.text-danger {
+    margin-left: 0px !important; 
 }
+.form-input.email span.text-danger {                                            
+    margin-left: 0px;                                                                                        
 }
-
+.form-input.date.licensenumber span.text-danger {   
+    margin-left: 0px; 
+}
+.form-input.date.licensenumber.user span.text-danger { 
+    margin-left: 0px;
+}
+.form-input.date.licensenumber.user.password span.text-danger {
+    margin-left: 0px;
+} 
+.form-input.date.licensenumber.user.password.confirm span.text-danger {
+    margin-left: 0px;   
+}
+}   
 @media (max-width: 359px){
   .student-login {
     width: 100%;
 }
 .student-login img {
-   width: 100%;
+   width: 100%;  
 }
 .order-summary-section {
-   width: 100%;
+   width: 100%;  
 }
 }
-
-
 
 .text-danger{
     color:red;
-    text-align:center ;
+    text-align:left ;
 }
-
-
 .alert-success {
     color: #155724;
     background-color: #d4edda;
     border-color: #c3e6cb;
-    padding: 20px;
+    padding: 15px;
     margin-bottom: 20px;
-    border: 1px solid green;
+    border: 1px solid transparent;
     border-radius: 0.25rem;
-    font-size:20px;
 }
-
-
 .alert-danger {
     color: #721c24;
     background-color: #f8d7da;
     border-color: #f5c6cb;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid red;
-    border-radius: 0.25rem;
-    font-size:20px;
 }
-
 .alert-danger hr {
     border-top-color: #f1b0b7;
 }
-
 .alert-danger .alert-link {
     color: #491217;
 }
-
 .alert-danger .alert-link:hover {
     color: #491217;
 }

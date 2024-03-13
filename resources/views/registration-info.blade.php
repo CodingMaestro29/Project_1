@@ -25,7 +25,7 @@
                         <h4>Your name:</h4> 
                         <span>{{ $student->fname ." ".$student->lname }}</span>
                       </div> 
-                      <div class="student-regis-info">        
+                      <div class="student-regis-info">         
                         <h4>Your mailing address:</h4> 
                         <span>{{ $student->address ." ".$student->city." ".$student->states." ".$student->zipcode }}</span>
                         <!-- <span>xyz sdvsdvsdb, GA, 15555</span> -->
@@ -36,7 +36,7 @@
                       </div> 
                       <div class="student-regis-info">
                         <h4>Your driver's license:</h4> 
-                        <span>{{ $student->licensenumber }}</span>
+                        <span>{{ $student->licensenumber }}</span>  
                       </div>
                     </div>
                  </div>
@@ -46,7 +46,7 @@
                     <a href="{{route('dashboard.index') }}"> Student Home</a>
                  </div>   
                </div>
-         </div>   
+</div>   
 
 
 @endsection 

@@ -32,7 +32,6 @@ class AuthController extends Controller
           'password' => 'required',
         ]);
 
-
         if(Auth::guard('student')->attempt($request->only('email','password'))){
           //  dd('test1');
             return redirect('dashboard');

@@ -60,7 +60,7 @@
                                   <li><a href="{{route('about.index') }}">about us</a></li>
                                   <li><a href="{{route('contact.index') }}">Contact us</a></li>
                                   <li class="star"><a href="{{route('login') }}"><img class="star" src="{{ asset('asset/images/star.png') }}" /> student login</a></li>
-                              </ul>
+                              </ul> 
                             </nav> 
                    </div> 
               </div>
@@ -101,13 +101,9 @@
         $("#navbar-menu li").each(function () {
               var anchor = $(this).find('a');
               var url = anchor.attr('href');
-
-        console.log(url);
-
-
-
+          
+              console.log(url);
         if(redirectUrl===url){
-
         $("#navbar-menu li").removeClass("active");
           $(this).addClass("active");
 

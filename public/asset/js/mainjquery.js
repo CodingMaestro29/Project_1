@@ -1,8 +1,8 @@
 /*toggle*/
 document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.getElementById('navbar-toggle');
-    const menu = document.getElementById('navbar-menu');
-    const crossIcon = document.querySelector('.fas.fa-times');
+    const menu = document.getElementById('navbar-menu'); 
+    const crossIcon = document.querySelector('.fas.fa-times'); 
 
     toggleButton.addEventListener('click', function() {
         menu.classList.toggle('active'); 
@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleButton.style.display = 'block'; // Show the toggle icon
         }
     }); 
-
-    crossIcon.addEventListener('click', function() {
-        menu.classList.remove('active');
-        crossIcon.style.display = 'none'; // Hide the cross icon when menu is closed
-        toggleButton.style.display = 'block'; // Show the toggle icon 
+   
+    crossIcon.addEventListener('click', function() { 
+        menu.classList.remove('active');  
+        crossIcon.style.display = 'none'; // Hide the cross icon when menu is closed 
+        toggleButton.style.display = 'block'; // Show the toggle icon  
     });
 
     toggleButton.addEventListener('click', function() {
@@ -49,16 +49,16 @@ document.addEventListener('DOMContentLoaded', function() {
     faqQuestions.forEach(function (question) {
         question.addEventListener('click', function () { 
             const parent = this.parentElement;
-            const isActive = parent.classList.contains('active');
+            const isActive = parent.classList.contains('active'); 
 
-            // Close all items
-            faqQuestions.forEach(function (q) {
-                q.parentElement.classList.remove('active');
-            });
-
+            // Close all items  
+            faqQuestions.forEach(function (q) {  
+                q.parentElement.classList.remove('active'); 
+            });         
+ 
             // Open only the clicked item if it wasn't already open
-            if (!isActive) {
-                parent.classList.add('active');
+            if (!isActive) {     
+                parent.classList.add('active'); 
             }
         });
     });
