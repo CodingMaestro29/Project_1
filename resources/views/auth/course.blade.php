@@ -184,7 +184,7 @@
                                         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                                              <!-- <img src="{{ asset('asset/images/captcha.png') }}" /> -->
                                              
-                                             <div class="g-recaptcha" data-name="g-token" data-sitekey="6LfDy5UpAAAAAN_NSCsjv6cZxYVaOYKxK8Lk54Oy">
+                                             <div class="g-recaptcha" data-name="g-token" data-sitekey="6LfJEpcpAAAAAMziIEdSu7hQDCAmoxZA_crIPMyH">
                                              
                                              </div>
                                              <span class="text-success">{{ session('success_message') }}</span>
@@ -192,8 +192,9 @@
                                             
                                           </div>
                                       <div class="btn"> <img src="{{ asset('asset/images/submiticon.png') }}" />
-                                      <input type="submit" value="SIGN UP"></div>
+                                      <input type="submit" value="SIGN UP">
                                       <!-- <button type="submit">SIGN UP</button> -->
+                                      </div>
                                       <img class="mirrorimage" src="{{ asset('asset/images/btnmerror.png') }}" />
                                 </form>
                             </div>
@@ -231,41 +232,43 @@
 
 
          <script>
-           const settings = {
-                async: true,
-                crossDomain: true,
-                url: 'https://us-states.p.rapidapi.com/basic',
-                method: 'GET',
-                headers: {
-                    'X-RapidAPI-Key': 'b19cbff30emsha5dbbdb1687b214p1df0fdjsn3d4b283d61aa',
-                    'X-RapidAPI-Host': 'us-states.p.rapidapi.com'
-                }
-            };
+    
+    $(document).ready(function () {
+        
+        var jsonPath = "{{ asset('json/states_hash.json') }}";
 
-            $.ajax(settings).done(function (response) {
-              //  console.log(response);
-              const dropdown = $('#statse');
+        var selectBox = $('#statse');
+        var selectBox11 = $('#license');
 
-              const dropdown11 = $('#license');
+        selectBox.empty();
+        selectBox11.empty();
 
         
-        dropdown.empty();
-        dropdown11.empty();
+        selectBox.append($('<option>', {
+            value: '...',
+            text: '...'
+        }));
 
-        // Add a default option
-        dropdown.append($('<option>').val('...').text('...'));
-        dropdown11.append($('<option>').val('...').text('...'));
+        selectBox11.append($('<option>', {
+            value: '...',
+            text: '...'
+        }));
 
-        // Iterate over the response and add options to the dropdown
-        $.each(response, function (index, state) {
-            dropdown.append($('<option>').val(state.postal).text(state.name));
-        });
-
-        $.each(response, function (index, state) {
-            dropdown11.append($('<option>').val(state.postal).text(state.postal));
-        });
+        
+        $.getJSON(jsonPath, function (data) {
+         $.each(data, function (key, value) {
+                selectBox.append($('<option>', {
+                    value: key,
+                    text: value
+                }));
+                selectBox11.append($('<option>', {
+                    value: key,
+                    text: key
+                }));
             });
-     </script>
+        });
+    });
+</script>
          
          
         

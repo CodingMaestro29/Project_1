@@ -57,5 +57,11 @@ class Student extends Authenticatable implements AuthenticatableContract
         'password' => 'hashed',
     ];
 
+    public function carts()
+    {
+        return $this->hasMany(Cart::class, 'user_id');
+    }
+
+
 
 }

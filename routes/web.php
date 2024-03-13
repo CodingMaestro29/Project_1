@@ -13,6 +13,7 @@ use App\Http\Controllers\TermsConditionsController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PaypalController;
 
 
 
@@ -58,6 +59,8 @@ Route::get('login',[AuthController::class , 'index'])
  Route::post('/register', [AuthController::class, 'register'])
     ->name('auth.register');
 
+    
+
 Route::get('/faq',[FaqController::class , 'index'])
 ->name('faq.index');
 
@@ -87,6 +90,18 @@ Route::get('/student-info',[DashboardController::class , 'registration_info'])
 
 Route::get('/student-table',[DashboardController::class , 'student_table'])
 ->name('student.table');
+
+Route::get('/payment', [PaypalController::class, 'index'])
+    ->name('payment');
+
+Route::post('paypal', [PaypalController::class, 'paypal'])
+    ->name('paypal'); 
+    
+    Route::get('success', [PaypalController::class, 'success'])
+    ->name('success'); 
+    
+    Route::get('cancel', [PaypalController::class, 'cancel'])
+    ->name('cancel'); 
 
 Route::get('logout',[AuthController::class , 'logout'])
  ->name('auth.logout');
