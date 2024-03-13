@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\DB;
 
 use App\Models\Student;
 
+
 class AuthController extends Controller
 {
 
@@ -91,7 +92,7 @@ class AuthController extends Controller
 
          $recaptcha =  $input['g-recaptcha-response']; 
 
-         $secret_key = '6LfDy5UpAAAAAKieujPA6f9WCCLrbtgdIFKIoev0'; 
+         $secret_key = '6LfJEpcpAAAAAN6v4q9e3ydTdda3JyUSiWDHq73r'; 
 
          $url = 'https://www.google.com/recaptcha/api/siteverify?secret='
           . $secret_key . '&response=' . $recaptcha; 

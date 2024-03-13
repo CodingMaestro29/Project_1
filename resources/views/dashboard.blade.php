@@ -17,7 +17,7 @@
                  </div>
 
                  <div class="dashboard-tabs">
-                    <a href="#"> Go to My Course</a>
+                    <a href="{{route('payment') }}"> Go to My Course</a>
                     <a href="{{route('student.table') }}"> My Table of Contents</a>
                     <a href="{{route('student.registration') }}"> My Registration Information</a>
                  </div>   
