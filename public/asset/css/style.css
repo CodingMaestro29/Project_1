@@ -1333,8 +1333,9 @@ select#years {
     border-color: #c3e6cb;
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid transparent;
+    border: 1px solid green;
     border-radius: 0.25rem;
+    font-size:20px;
 }
 
 
@@ -1343,6 +1344,10 @@ select#years {
     background-color: #f8d7da;
     border-color: #f5c6cb;
     padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid red;
+    border-radius: 0.25rem;
+    font-size:20px;
 }
 
 .alert-danger hr {
