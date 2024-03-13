@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->nullable()->constrained('students');
             $table->foreignId('product_id')->nullable()->constrained('carts');
+            $table->string('payment_method')->nullable();
+            $table->string('email')->nullable();
             $table->string('payment_id')->nullable();
             $table->integer('status')->default(0);
             $table->float('amount');

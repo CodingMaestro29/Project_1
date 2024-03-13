@@ -17,6 +17,8 @@ class Cart extends Model
         'product_name',
         'price',
         'quantity',
+        'payment_method',
+        'email',
         'status',
         'payment_id',
         
