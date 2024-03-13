@@ -49,16 +49,16 @@ document.addEventListener('DOMContentLoaded', function() {
     faqQuestions.forEach(function (question) {
         question.addEventListener('click', function () { 
             const parent = this.parentElement;
-            const isActive = parent.classList.contains('active');
+            const isActive = parent.classList.contains('active'); 
 
-            // Close all items 
-            faqQuestions.forEach(function (q) { 
+            // Close all items  
+            faqQuestions.forEach(function (q) {  
                 q.parentElement.classList.remove('active'); 
-            });   
+            });         
  
             // Open only the clicked item if it wasn't already open
-            if (!isActive) {
-                parent.classList.add('active');
+            if (!isActive) {     
+                parent.classList.add('active'); 
             }
         });
     });

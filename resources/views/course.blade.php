@@ -29,7 +29,7 @@
                                           <input type="number" id ="Phone" name="number">
                                           <input type="number" id ="Phone" name="number">
                                           <input type="number" id ="Phones" name="number">
-                                        </div>     
+                                        </div>    
  
                                        <div class="form-input date">
                                           <label>* Date Of Birth:</label>

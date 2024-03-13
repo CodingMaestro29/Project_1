@@ -3,9 +3,9 @@
 @section('content')
 
 
- 
 
-<div class="container"> 
+
+<div class="container">
           <h1 class="title">Student Dashboard</h1>
                 <div class="student-dashboard-section">
                  <div class="contact">       
@@ -15,8 +15,8 @@
                     <p class="privacy-policy">You will be glad that you did ...</p> 
                     <a class="get-certificate" href="#">Get class completion certificate</a>
                  </div>
- 
-                 <div class="dashboard-tabs"> 
+
+                 <div class="dashboard-tabs">
                     <a href="#"> Go to My Course</a>
                     <a href="{{route('student.table') }}"> My Table of Contents</a>
                     <a href="{{route('student.registration') }}"> My Registration Information</a>
