@@ -351,9 +351,12 @@ select#find {
     margin-top: 35px;
     margin-left: 20px;
 }
-.form-input.captcha img {
+/* .form-input.captcha img {
     width: auto;
     height: auto;
+    margin-top: 50px;
+} */
+.form-input.captcha {
     margin-top: 50px;
 }
 /* .btn input[type="button"] {
@@ -1150,7 +1153,7 @@ p.privacy-policy {
    width: 100%;
 }
 ul.listing li {
-    width: 100%;
+    width: 100%; 
 }
 p.about-description {
     width: 100%;
