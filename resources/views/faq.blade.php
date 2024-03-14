@@ -30,9 +30,9 @@
                                         <h2 class="faq-question"> <img class="arrow" src="{{ asset('asset/images/faqarrow.png') }}" /> How long are your 2 online courses?</h2>
                                         <div class="faq-answer">
                                             <p>By law, your auto insurance company must give you a discount for three years if you have successfully completed an approved mature driver improvement course.</p>
-
+     
                                         </div>
-                                    </div>
+                                    </div> 
                                     <div class="faq-item">
                                         <h2 class="faq-question"> <img class="arrow" src="{{ asset('asset/images/faqarrow.png') }}" /> What are your courses like?</h2>
                                         <div class="faq-answer">
@@ -44,7 +44,6 @@
                                         <h2 class="faq-question"> <img class="arrow" src="{{ asset('asset/images/faqarrow.png') }}" /> How much can taking your discount course save me?</h2>
                                         <div class="faq-answer">
                                             <p>By law, your auto insurance company must give you a discount for three years if you have successfully completed an approved mature driver improvement course.</p>
-
                                         </div>
                                     </div>
                                     <div class="faq-item">
@@ -52,9 +51,9 @@
                                         <div class="faq-answer">
                                             <p>By law, your auto insurance company must give you a discount for three years if you have successfully completed an approved mature driver improvement course.</p>
 
-                                        </div>
+                                        </div> 
                                     </div>
-                     
+                       
                  </div>
 
                  <div class="sign-up">

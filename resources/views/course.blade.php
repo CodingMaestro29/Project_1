@@ -6,7 +6,7 @@
             <h1 class="title">Registration Information</h1>
         <div class="main-section">    
                             <div class="form-section">    
-                                <h3 class="login-title">Create Your Logins</h3> 
+                                <h3 class="login-title">Create Your Login</h3>  
                                  <form class="registration-form">
                                         <div class="form-input">
                                           <label>* First Name:</label>  
@@ -14,7 +14,7 @@
                                         </div>
                                         <div class="form-input">
                                           <label>Middle Initial:</label>
-                                          <input type="text" id ="mname" name="mname">
+                                          <input type="text" id ="mname" name="mname"> 
                                        </div>  
                                         <div class="form-input"> 
                                           <label>* Last Name:</label>
@@ -38,12 +38,12 @@
                                                   <option value="1">1</option>
                                                   <option value="2">2</option>
                                                   <option value="3">3</option>
-                                            </select> 
+                                            </select>   
                                             <select id="month" name="month">
                                                   <option value="...">...</option>
-                                                  <option value="1">1</option>
-                                                  <option value="2">2</option>
-                                                  <option value="3">3</option>
+                                                  <option value="1">1</option>  
+                                                  <option value="2">2</option>   
+                                                  <option value="3">3</option>  
                                             </select>
                                             <select id="years" name="years">
                                                   <option value="...">...</option>
@@ -51,7 +51,7 @@
                                                   <option value="1992">1991</option>
                                                   <option value="1993">1992</option>
                                             </select>
-                                       </div>
+                                        </div>
                                               <div class="border-line"></div>
                                        <div class="form-input license-state">
                                           <label>* Driver's License State:</label>
@@ -73,7 +73,7 @@
                                           <label>* User Name:   </label>
                                           <input type="text" id ="licensenumber" name="licensenumber"> 
                                           <p>User Name must be at least 8 characters, no more than 36 characters.</p>
-                                        </div>
+                                        </div> 
 
                                        <div class="form-input date licensenumber user password">
                                           <label>* Password:  </label>
@@ -105,17 +105,18 @@
                                           </select> 
                                         </div>
                                       <div class="form-input zipcode">  
-                                        <label>* Zip Code</label>  
+                                        <label>* Zip Code</label>   
                                         <input type="text"  name="address"> 
                                       </div>   
                                       <div class="border-line"></div>
                                        <div class="form-input find-us">                                         
-                                         <label>How did you find out<br> about us?</label> <select id="find" name="find">
-                                                  <option value="...">...</option>
+                                         <label>How did you find out<br> about us?</label> 
+                                           <select id="find" name="find">
+                                                  <option value="...">...</option> 
                                                   <option value="xyz">xyz</option> 
                                                   <option value="xyz">xyz</option> 
                                                   <option value="xyz">xyz</option> 
-                                            </select> 
+                                            </select>  
                                             <p>How did you find our website?</p>
                                         </div>
                                         <div class="form-input captcha">  
@@ -123,7 +124,7 @@
                                         </div>     
                                       <div class="btn"> <img src="{{ asset('asset/images/submiticon.png') }}" /><input type="button" value="SIGN UP"></div>
                                       <img class="mirrorimage" src="{{ asset('asset/images/btnmerror.png') }}" />
-                                </form>
+                                </form>    
                             </div>
                   <div class="order-section">
                     <div class="order-summary-section"> 
@@ -135,7 +136,7 @@
                             <p class="course-name">Course Fee - Mature Driver</p>
                             <p class="course-price">$17.95</p>
                         </div>           
-                        <div class="course">
+                        <div class="course">    
                             <p class="course-name">Regular Mail Delivery</p> 
                             <p class="course-price free">FREE</p>
                         </div>  

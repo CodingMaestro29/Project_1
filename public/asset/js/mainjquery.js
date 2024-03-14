@@ -8,20 +8,20 @@ document.addEventListener('DOMContentLoaded', function() {
         menu.classList.toggle('active'); 
         if (menu.classList.contains('active')) {
             crossIcon.style.display = 'block'; // Show the cross icon when menu is active
-            toggleButton.style.display = 'none'; // Hide the toggle icon
-        } else {
-            crossIcon.style.display = 'none'; // Hide the cross icon when menu is not active
-            toggleButton.style.display = 'block'; // Show the toggle icon
+            toggleButton.style.display = 'none'; // Hide the toggle icon 
+        } else {  
+            crossIcon.style.display = 'none'; // Hide the cross icon when menu is not activess 
+            toggleButton.style.display = 'block'; // Show the toggle icon 
         }
-    }); 
-   
-    crossIcon.addEventListener('click', function() { 
+    });             
+     
+    crossIcon.addEventListener('click', function() {  
         menu.classList.remove('active');  
         crossIcon.style.display = 'none'; // Hide the cross icon when menu is closed 
         toggleButton.style.display = 'block'; // Show the toggle icon  
     });
 
-    toggleButton.addEventListener('click', function() {
+    toggleButton.addEventListener('click', function() { 
         crossIcon.style.display = 'block'; // Display cross icon when toggle button is clicked
         toggleButton.style.display = 'none'; // Hide the toggle icon when toggle button is clicked
     });
@@ -45,21 +45,20 @@ document.addEventListener('DOMContentLoaded', function() {
 /*faq*/
      document.addEventListener('DOMContentLoaded', function () {
     const faqQuestions = document.querySelectorAll('.faq-question');
-
+     
     faqQuestions.forEach(function (question) {
-        question.addEventListener('click', function () { 
+        question.addEventListener('click', function () {    
             const parent = this.parentElement;
             const isActive = parent.classList.contains('active'); 
-
+                     
             // Close all items  
-            faqQuestions.forEach(function (q) {  
-                q.parentElement.classList.remove('active'); 
-            });         
- 
-            // Open only the clicked item if it wasn't already open
+            faqQuestions.forEach(function (q) {     
+                q.parentElement.classList.remove('active');    
+            });               
+            // Open only the clicked item if it wasn't already open 
             if (!isActive) {     
                 parent.classList.add('active'); 
             }
-        });
+        });   
     });
-});
+});   

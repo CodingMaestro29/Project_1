@@ -6,31 +6,29 @@
         <div class="container">
           <h1 class="title">Payment Gateway</h1>
           @if(Session::has('success'))
-                <div class="alert alert-success">
-                    {{ Session::get('success') }}
-                </div>
-            @elseif(Session::has('error'))
+                <div class="alert alert-success"> 
+                    {{ Session::get('success') }}   
+                </div>  
+            @elseif(Session::has('error'))   
                 <div class="alert alert-danger">
-                    {{ Session::get('error') }}
+                    {{ Session::get('error') }} 
                 </div>
             @endif
                 <div class="student-dashboard-section">
                   <div class="payment-section">
-                    <div class="payments">
-                     <div class="paypal-payment">
-                     <h4>Paypal Payment</h4>
+                    <div class="payments"> 
+                     <div class="paypal-payment"> 
+                     <h4>Paypal Payment</h4> 
                          <p>We accept secure Paypal payments. To pay for course click button "Pay Now" below. You will be forwarded to paypal secure payment page where you will be able to complete payment. After payment you will receive access to course content.</p>
                           <form method="post" action="{{route('paypal') }}">
-                          @csrf
+                          @csrf 
                             <div class="paypal-payment-btn">
-                            <input type="hidden" name="price" value="17.95">
-                                <input type="hidden" name="product_name" value="Mature Driver">
-                                <input type="hidden" name="quantity" value="1">
-                        
+                                <input type="hidden" name="price" value="17.95">
+                                <input type="hidden" name="product_name" value="Mature Driver">     
+                                <input type="hidden" name="quantity" value="1">     
                                 <input type="submit" value="Pay Now">
-                           </div>
+                           </div>      
                          </form>
-                         
                      </div>
                    </div>
                    <div class="payments">
@@ -39,7 +37,7 @@
                          <p>We accept secure credit card payments. To pay for course click button "Pay with card" below. You will be forwarded to paypal secure payment page where you will be able to complete payment. After payment you will receive access to course content.</p>
                           <form>
                             <div class="paypal-payment-btn">
-                                  <input type="submit" value="Pay With Card">
+                                  <input type="submit" value="Pay With Card"> 
                            </div>
                          </form>
                      </div>
@@ -54,8 +52,8 @@
                                 <input type="text" name="token">
                                 <input type="submit" value="Confirm">
                          </div>
-                         </form>
-                     </div>
+                         </form>  
+                     </div>    
                    </div>
                  </div>
                  <div class="dashboard-tabs payment">
