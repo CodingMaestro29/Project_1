@@ -14,6 +14,7 @@ use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PaypalController;
+use App\Http\Controllers\StudentController;
 
 
 
@@ -59,7 +60,11 @@ Route::get('login',[AuthController::class , 'index'])
  Route::post('/register', [AuthController::class, 'register'])
     ->name('auth.register');
 
-    
+Route::get('/import', [StudentController::class , 'index'])
+    ->name('import');     
+
+Route::post('/import-students', [StudentController::class , 'importStudentsFromDocx'])
+->name('import.students');   
 
 Route::get('/faq',[FaqController::class , 'index'])
 ->name('faq.index');

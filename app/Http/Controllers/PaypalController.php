@@ -43,11 +43,14 @@ class PaypalController extends Controller
 
              if($order['status'] == 'CREATED'){
                 $userId = auth()->user()->id;
+                $email = auth()->user()->email;
                 Cart::create([
                     'user_id' => $userId,
                     'product_name' =>  $request->product_name,
                     'price' =>  $request->price,
                     'quantity' =>  $request->quantity,
+                    'payment_method' =>  'Paypal',
+                    'email'=>$email,
                     'status' =>  Cart::STATUS['in_process'],
                     'payment_id' => $order['id'],
                     ]);
@@ -92,6 +95,8 @@ class PaypalController extends Controller
                 Order::create([
                     'user_id' => auth()->user()->id,
                     'product_id' =>  $item->id,
+                    'payment_method' =>  'Paypal',
+                    'email' =>  auth()->user()->email,
                     'payment_id' =>   $item->payment_id,
                     'status' =>  Cart::STATUS['success'],
                     'amount' =>  $item->price,

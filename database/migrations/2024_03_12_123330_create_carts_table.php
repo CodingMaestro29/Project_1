@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('product_name')->nullable();
             $table->string('price')->nullable();
             $table->string('quantity')->nullable();
+            $table->string('payment_method')->nullable();
+            $table->string('email')->nullable();
             $table->integer('status')->default(0);
             $table->string('payment_id')->nullable();
             $table->timestamps();

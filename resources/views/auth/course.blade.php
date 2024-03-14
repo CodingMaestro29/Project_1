@@ -184,7 +184,7 @@
                                         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                                              <!-- <img src="{{ asset('asset/images/captcha.png') }}" /> -->
                                              
-                                             <div class="g-recaptcha" data-name="g-token" data-sitekey="6LfJEpcpAAAAAMziIEdSu7hQDCAmoxZA_crIPMyH">
+                                             <div class="g-recaptcha" data-name="g-token" data-sitekey="6LfAb5gpAAAAAPO3Sa2gEvH3p3xARh_SlyeHymm4">
                                              
                                              </div>
                                              <span class="text-success">{{ session('success_message') }}</span>

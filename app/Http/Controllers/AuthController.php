@@ -91,7 +91,7 @@ class AuthController extends Controller
 
          $recaptcha =  $input['g-recaptcha-response']; 
 
-         $secret_key = '6LfJEpcpAAAAAN6v4q9e3ydTdda3JyUSiWDHq73r'; 
+         $secret_key = '6LfAb5gpAAAAALZdBqt9y1mKS8j438iqR89UEAb8'; 
 
          $url = 'https://www.google.com/recaptcha/api/siteverify?secret='
           . $secret_key . '&response=' . $recaptcha; 
