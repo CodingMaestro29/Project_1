@@ -73,7 +73,7 @@ Route::get('forgot-password',[AuthController::class , 'forgotPassword'])
     ->name('reset.password');
 
     Route::post('process-reset-password',[AuthController::class , 'processResetPassword'])
-    ->name('process.password'); 
+    ->name('process.reset'); 
 
 Route::get('/import', [StudentController::class , 'index'])
     ->name('import');     

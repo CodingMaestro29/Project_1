@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ResetPasswordEmail;
+use Illuminate\Support\Facades\Hash;
 
 
 use App\Models\Student;
@@ -276,6 +277,16 @@ class AuthController extends Controller
                 'password' => 'required|min:6|max:18|confirmed',
                 'password_confirmation' => 'required',
              ]);
+
+
+             Student::where('email' , $user->email )->update([
+                'password' => Hash::make($request->password)
+
+             ]);
+
+             DB::table('password_reset_tokens')->where('email' ,$user->email )->delete();
+
+             return redirect()->route('login')->with('success' ,'Password Updated' );
 
         }
 

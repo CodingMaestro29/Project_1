@@ -4,6 +4,15 @@
 
 <div class="container">
           <h1 class="title">Secure Login - 100% Secure</h1>
+          @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+            @elseif(Session::has('error'))
+                <div class="alert alert-danger">
+                    {{ Session::get('error') }}
+                </div>
+            @endif
                 <div class="student-login-section">
                        
                     <p class="refund-policy">Login To The Course</p>  
