@@ -24,12 +24,12 @@ img {
     left: 40%;
 }
 .rating p {
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 15px;
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    color: rgba(23, 88, 142, 1);
+    font-size: 13px; 
+    font-weight: 500; 
+    line-height: 15px; 
+    text-align: center;  
+    font-family: "Inter", sans-serif; 
+    color: rgba(23, 88, 142, 1); 
     margin: 0;
 }
 .number {
@@ -44,7 +44,7 @@ img {
     color: rgba(0, 120, 173, 1);
     font-size: 28px;
     line-height: 33px;
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", sans-serif;  
     text-align: right;
     -webkit-text-fill-color: rgb(0 120 173 / 67%);
     -webkit-text-stroke-width: 1px;
@@ -79,9 +79,9 @@ img {
 .navbar-toggle span {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: #fff; 
     margin-bottom: 2.5px;
-    margin-top: 2.5px;
+    margin-top: 2.5px;  
 }
  
 .navbar-toggle .fas {
@@ -151,6 +151,174 @@ li img {
     width: 18px;
     height: auto;
 }
+
+/*home*/ 
+.main-page-section.home {
+    padding: 50px 50px 150px 50px !important;
+    background: url('../images11/banner-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -15px;
+}
+.main-banner {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+}
+.banner-section h2 {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 45px;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+.banner-section h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    color: rgba(23, 88, 142, 1);
+    font-family: "Inter", sans-serif;
+}
+.banner-content li {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 30px;
+    list-style: none;
+    position: relative;
+    color: #fff;
+}
+.banner-content ul li img {
+    position: absolute;
+    left: -41px;
+    top: 3px;
+    background: #fff;
+    padding: 5px;
+    border-radius: 50%;
+}
+.banner-content {
+    position: relative;
+}
+.price-corse {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 60px 20px 0px 20px;
+}
+.Course {
+   background: rgb(204 204 204 / 23%);
+    padding: 40px;
+    border-radius: 10px;
+    width: 500px;
+}
+.Course a {
+    font-size: 18px !important;
+}
+.Course p {
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 28px;
+    letter-spacing: 0em;
+    margin: 0px;
+    text-align: center;
+    color: #000;
+}
+.Course h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 19px; 
+    letter-spacing: 0em;
+    margin: 40px 0;
+    text-align: center;
+     color: #000;
+}
+.Course .sign-up {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.home-bottom {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    margin: 10px 20px 0px 20px;
+}
+.bottom {
+    background: rgb(204 204 204 / 23%);
+    padding: 40px;
+    border-radius: 10px;
+    width: 334px;
+}
+.home-bottom h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 19px;
+    letter-spacing: 0em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #000;
+    margin: 0;
+}
+.bottom P {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    margin-bottom: 0px;
+    text-align: center;
+   color: #000;
+}
+.bottom img {
+   /* filter: brightness(0) invert(1);*/
+    width: 100px;
+    height: auto;
+}
+.imgs-home {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.bottom:hover {
+    background: #3399ff;
+}
+.bottom:hover h4{
+    color: #fff;
+}
+.bottom:hover p{
+    color: #fff;
+} 
+.bottom:hover img {
+    filter: brightness(0) invert(1);
+}
+/*.bottom h4 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}*/
+.banner-last-section {
+    background: #389dd7;
+    padding: 10px;
+    margin-top: 50px;
+}
+p.con {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    text-align: left;
+}
+/*close*/
+
+
+/*course*/
 h1.title {
     color: rgba(51, 153, 255, 1);
     font-size: 26px;
@@ -251,7 +419,7 @@ select#date {
 }
 select#month {
     width: 94px;
-    height: 38px;
+    height: 38px;   
 }
 select#years {
     width: 94px;
@@ -259,7 +427,7 @@ select#years {
 }
 .form-input.license-state {
     margin-left: -75px;
-    margin-top: 35px;
+    margin-top: 35px; 
 }
 .form-input.date.licensenumber {
     margin-left: -94px;
@@ -374,7 +542,7 @@ select#find {
     margin-left: 0 !important;
 } */
 
-.btn input[type="submit"] {
+.btn input[type="submit"] { 
     font-weight: 600;
     font-size: 18px;
     color: rgba(255, 255, 255, 1);
@@ -445,7 +613,6 @@ p.order-heading {
     line-height: 19px;
     color: #fff;
     font-family: "Inter", sans-serif;
-    
 }
 p.secure-payment {
     border: 1px solid rgba(255, 194, 32, 1);
@@ -508,9 +675,9 @@ img.totalcartimg {
 .header-section {
     padding: 0 20px;
 }
-.main-page-section {
+/* .main-page-section {
     padding: 0 20px;
-}
+} */
 form.registration-form span.text-danger {
     color: red;
     display: block;
@@ -524,22 +691,19 @@ form.registration-form span.text-danger {
     margin-left: 62px;
 }
 .form-input.date.licensenumber span.text-danger {
-    margin-left: 193px;
+    margin-left: 193px; 
 }
-
 .form-input.date.licensenumber.user span.text-danger {
     margin-left: 102px;
 }
-
 .form-input.date.licensenumber.user.password span.text-danger {
     margin-left: 90px;
 }
-
 .form-input.date.licensenumber.user.password.confirm span.text-danger {
     margin-left: 150px;
-}
+} 
 /*testimonial*/
-.testimonil-section {
+.testimonil-section { 
     display: flex;
 }
 p.tetimonial-content {
@@ -639,7 +803,7 @@ p.step span {
     border-radius: 10px;
     z-index: 9999;
     margin-bottom: 20px;
-   width: 700px;
+   width: 700px;    
 }
 .faq-question {
     cursor: pointer;
@@ -742,7 +906,7 @@ p.privacy-policy {
     font-weight: 400;
     line-height: 19px;
     color: rgba(51, 51, 51, 1);
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", sans-serif; 
     width: 730px;
 }
 ul.listing {
@@ -774,14 +938,14 @@ p.about-description.terms.left {
 /*login*/
 .student-login {
     width: 320px;
-    border: 1px solid rgba(85, 85, 85, 1);
+    border: 1px solid rgba(85, 85, 85, 1); 
     margin-top: 30px;
 }
 p.login-title {
     text-align: center;
     background: linear-gradient(180deg, #69C1F6 0%, #5B91E7 100%);
-    padding: 10px;
-    color: rgba(255, 255, 255, 1);
+    padding: 10px;  
+    color: rgba(255, 255, 255, 1);  
     font-size: 14px;
     font-weight: 700;
     line-height: 17px;
@@ -799,12 +963,12 @@ p.login-text {
     margin: 10px 0 0 0;
 }
 .login-input {
-    text-align: center;
+    text-align: center;  
     padding: 10px 0px;
 }
 input#loginuser {
-     padding: 12px 4px;
-    margin-left: -4px;
+    padding: 12px 4px;
+    margin-left: -4px;  
     border: 1px solid rgba(148, 148, 148, 1);
 }
 input#Password {
@@ -814,8 +978,8 @@ input#Password {
 }
 .login-input label {
     background: rgba(238, 238, 238, 1);
-    padding: 12px 10px;
-    border: 1px solid rgba(148, 148, 148, 1);
+    padding: 12px 10px; 
+    border: 1px solid rgba(148, 148, 148, 1); 
     font-size: 13px;
     font-weight: 400;
     line-height: 20px;
@@ -932,8 +1096,8 @@ p.subtitle {
     border: 2px solid rgb(95 159 235);
    outline: none !important;
 }
-.dashboard-tabs.payment a {
-    width: 100px;
+.dashboard-tabs.payment a { 
+    width: 100px; 
 }
 a.get-certificate {
     font-size: 20px;
@@ -982,6 +1146,7 @@ a.edit {
 
 
 /*payment-gateway*/
+
 .paypal-payment {
     background: #f5f5f5;
     border-radius: 4px;
@@ -1007,6 +1172,9 @@ a.edit {
     letter-spacing: 0em;
     text-align: left;
     margin-bottom: 30px;
+}
+.payment-input {
+    display: flex;
 }
 .paypal-payment-btn input[type="submit"] {
     font-size: 20px;
@@ -1050,14 +1218,15 @@ a.edit {
     margin-left: -4px;
     border: 1px solid #ccc;
     outline: none;
+    width: 300px;
 }  
 .paypal-payment .payment-input input[type="submit"] {
     font-size: 17px;
     font-weight: 500;
     line-height: 26px;
     font-family: "Inter", sans-serif;
-    text-decoration: none;
-    background: linear-gradient(180deg, #4AADE5 0%, #137EBA 100%);
+    text-decoration: none; 
+    background: linear-gradient(180deg, #4AADE5 0%, #137EBA 100%); 
     color: rgba(255, 255, 255, 1);
     text-align: center;
     padding: 7px;
@@ -1069,7 +1238,7 @@ a.edit {
 }
 /*close*/
 
-
+ 
 /*Mobile Responsive*/
 @media (max-width:900px) and (min-width: 768px){
     .order-summary-section {
@@ -1091,8 +1260,8 @@ p.order-heading {
 .main-header-section {    
     display: flex; 
     align-items: center;
-    justify-content: space-between;
-}
+    justify-content: space-between;    
+} 
 .navbar-menu {
     display: none; 
 }
@@ -1163,6 +1332,24 @@ p.about-description {
 }
 }    
 @media (max-width:767px){
+    .price-corse {
+    display: block;
+}
+.Course {
+    width: auto;
+    margin: 20px;
+}
+    .main-banner {
+    display: block;
+}
+.home-bottom {
+    display: block;
+}
+.bottom {
+    margin-bottom: 30px;
+    width: auto;
+    margin: 20px;
+}
     .payments {
         width: 100%;
  }
@@ -1225,7 +1412,7 @@ form.registration-form input#Phone {
     width: 30px;   
 }
 form.registration-form input#Phones {
-    width: 40px;
+    width: 40px; 
 }
 select#date {
     width: 44px;
@@ -1238,14 +1425,23 @@ select#month {
 }
 select#find {
     width: 200px;
-    margin-top: 10px;
+    margin-top: 10px; 
 }
 .payment-input input[type="text"] {
-    width: 200px;
+    width: 195px;
+} 
+}
+@media (max-width: 550px){
+    .price-corse {
+    display: block;
+}
+.Course {
+    margin-bottom: 30px;
+    width: auto;
 }
 }
+@media (max-width:450px){    
 
-@media (max-width:450px){
     .payment-input input[type="text"] {
         width: 100px;
     }
@@ -1367,10 +1563,10 @@ select#years {
 .form-input.date { 
     margin-left: 0;
 }   
-span.text-danger {
+span.text-danger { 
     margin-left: 0px !important; 
-}
-.form-input.email span.text-danger {                                            
+} 
+.form-input.email span.text-danger {                                                
     margin-left: 0px;                                                                                        
 }
 .form-input.date.licensenumber span.text-danger {   
@@ -1385,10 +1581,10 @@ span.text-danger {
 .form-input.date.licensenumber.user.password.confirm span.text-danger {
     margin-left: 0px;   
 }
-}   
-@media (max-width: 359px){
+}    
+@media (max-width: 359px){ 
   .student-login {
-    width: 100%;
+    width: 100%; 
 }
 .student-login img {
    width: 100%;  
@@ -1397,11 +1593,6 @@ span.text-danger {
    width: 100%;  
 }
 }
-
-
-
-
-
 
 .text-danger{
     color:red;

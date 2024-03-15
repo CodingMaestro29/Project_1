@@ -14,6 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
     
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="{{ asset('asset/js/mainjquery.js') }}"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src= 
@@ -52,7 +53,7 @@
                               </div>
                                <i class="fas fa-times"></i> <!-- Cross icon -->
                                 <ul class="navbar-menu" id="navbar-menu">
-                                  <li><a href="#">Home</a></li>
+                                  <li><a href="{{route('home') }}">Home</a></li>
                                   <li class="active" ><a href="{{route('auth.register_view') }}">START COURSE</a></li>
                                   <li><a href="{{route('testimonials.index') }}">testimonials</a></li>
                                   <li><a href="{{route('works.index') }}">HOW IT WORKS</a></li>
@@ -91,11 +92,18 @@
 
         var Localhost = window.location.hostname.includes('localhost');
 
+        var hostName = window.location.hostname;
+       // alert(hostName);
+
         var currentPagePath = window.location.pathname;
 
         var protocol = Localhost ? 'http://' : 'https://';
 
+        if(hostName == 'localhost'){
         var redirectUrl = protocol  + 'localhost:8000'+ currentPagePath;
+        }else{
+          var redirectUrl = protocol  + hostName + currentPagePath;
+        }
         console.log( redirectUrl);
 
         $("#navbar-menu li").each(function () {

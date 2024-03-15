@@ -10,4 +10,12 @@ class AboutController extends Controller
     {
         return view('about-us');
     }
+
+
+    public function home()
+    {
+        return view('home');
+    }
+
+
 }

@@ -34,7 +34,7 @@
                           </div>
                           <div class="main-div-user">
                             <div class="users">
-                               <a href="#" class="lost-password">Lost Password?</a>
+                               <a href="{{route('forgot.password') }}" class="lost-password">Lost Password?</a>
                                <a href="#" class="forget-user-name">Forgot User Name?</a>
                             </div>
                             <div class="submit-btn">

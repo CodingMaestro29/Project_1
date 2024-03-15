@@ -32,12 +32,15 @@ use App\Http\Controllers\StudentController;
 
 Route::get('/', function () {
   //  return view('auth.course');
-  return redirect()->route('auth.register_view');
+  return redirect()->route('home');
 });
 
 
 Route::get('/about-us',[AboutController::class , 'index'])
 ->name('about.index');
+
+Route::get('/home',[AboutController::class , 'home'])
+->name('home');
 
 
 Route::get('/contact-us',[ContactController::class , 'index'])
@@ -59,6 +62,18 @@ Route::get('login',[AuthController::class , 'index'])
 
  Route::post('/register', [AuthController::class, 'register'])
     ->name('auth.register');
+
+Route::get('forgot-password',[AuthController::class , 'forgotPassword'])
+    ->name('forgot.password'); 
+    
+    Route::post('process-forgot-password',[AuthController::class , 'processForgotPassword'])
+    ->name('process.password'); 
+
+    Route::get('reset-password/{token}',[AuthController::class , 'resetPassword'])
+    ->name('reset.password');
+
+    Route::post('process-reset-password',[AuthController::class , 'processResetPassword'])
+    ->name('process.password'); 
 
 Route::get('/import', [StudentController::class , 'index'])
     ->name('import');     

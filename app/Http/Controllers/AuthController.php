@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ResetPasswordEmail;
 
 
 use App\Models\Student;
@@ -203,9 +206,81 @@ class AuthController extends Controller
         return redirect()->route('student.registration')->with('error', 'Failed to update student. Please try again.');
     }
 
-        
-        
-    }
+        }
+
+
+        public function forgotPassword()
+        {
+            return view('auth.forgot-password'); 
+        }
+
+
+        public function processForgotPassword(Request $request)
+        {
+            $request->validate(
+                [
+                'email' => 'required|email|exists:students,email',
+                 ]);
+
+                $token = Str::random(60);
+
+                DB::table('password_reset_tokens')->where('email' ,$request->email )->delete();
+
+                DB::table('password_reset_tokens')->insert([
+                   'email' =>  $request->email,
+                   'token' =>  $token ,
+                   'created_at' => now()
+                ]);
+
+                $user = Student::where('email' ,$request->email )->first();
+
+                $formData = [
+                    'token' => $token ,
+                    'user' => $user,
+                    'mailSubject' => 'You have requested to reset your password'
+                ];
+
+                Mail::to($request->email)->send(new ResetPasswordEmail($formData));
+
+                return redirect()->back()->with('success' ,'Please check your inbox to rest your password' );
+        }
+
+
+        public function resetPassword($token)
+        {
+            $tokenExists =  DB::table('password_reset_tokens')->where('token' ,$token )->first();
+
+             if( $tokenExists == null){
+                return redirect()->route('forgot.password')->with('error' , 'Invalid request');
+             }
+
+            return view('auth.change-password' , ['token' => $token ]); 
+        }
+
+
+
+        public function processResetPassword(Request $request)
+        {
+             $token = $request->token;
+
+             $tokenExists =  DB::table('password_reset_tokens')->where('token' ,$token )->first();
+
+             if( $tokenExists == null){
+                return redirect()->route('forgot.password')->with('error' , 'Invalid request');
+             }
+
+             $user = Student::where('email' ,$tokenExists->email )->first();
+
+             $request->validate(
+                [
+                'password' => 'required|min:6|max:18|confirmed',
+                'password_confirmation' => 'required',
+             ]);
+
+        }
+
+
+
 
 
     public function logout()
