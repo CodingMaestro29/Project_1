@@ -731,7 +731,7 @@ p.con-des {
     color: rgba(51, 51, 51, 1);
     font-family: "Inter", sans-serif;
     width: 500px;
-}
+} 
 /*privacy*/
 p.privacy-policy {
     font-size: 14px;
@@ -748,7 +748,7 @@ ul.listing li {
     font-size: 14px;
     font-weight: 400;
     line-height: 19px;
-    letter-spacing: 0em;
+    letter-spacing: 0em; 
     text-align: left;
     font-family: "Inter", sans-serif;
     width: 621px;
@@ -758,21 +758,21 @@ ul.listing li {
 p.refund-policy {
     font-size: 25px;
     font-weight: 700;
-    line-height: 30px;
-    color: rgba(23, 88, 142, 1);
+    line-height: 30px; 
+    color: rgba(23, 88, 142, 1); 
     margin: 0;
     font-family: "Inter", sans-serif;
 }
-/*terms*/
+/*terms*/      
 p.about-description.terms.left {
     padding-left: 20px;
 }
 /*login*/
 .student-login {
     width: 320px;
-    border: 1px solid rgba(85, 85, 85, 1); 
+    border: 1px solid rgba(85, 85, 85, 1);  
     margin-top: 30px;
-}
+} 
 p.login-title {
     text-align: center;
     background: linear-gradient(180deg, #69C1F6 0%, #5B91E7 100%);
@@ -795,7 +795,7 @@ p.login-text {
     margin: 10px 0 0 0;
 }
 .login-input {
-    text-align: center;
+    text-align: center; 
     padding: 10px 0px;
 }
 input#loginuser {
@@ -814,7 +814,7 @@ input#Password {
     border: 1px solid rgba(148, 148, 148, 1); 
     font-size: 13px;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 20px; 
     font-family: "Inter", sans-serif;
     color: rgba(85, 85, 85, 1);
 }
@@ -826,7 +826,7 @@ form.registration-form input {
     outline: none;
 }
 form.registration-form select {
-    outline: none;
+    outline: none;      
 }
 form.login-form input {
     outline: none;
@@ -1057,8 +1057,8 @@ a.edit {
     font-weight: 500;
     line-height: 26px;
     font-family: "Inter", sans-serif;
-    text-decoration: none;
-    background: linear-gradient(180deg, #4AADE5 0%, #137EBA 100%);
+    text-decoration: none; 
+    background: linear-gradient(180deg, #4AADE5 0%, #137EBA 100%); 
     color: rgba(255, 255, 255, 1);
     text-align: center;
     padding: 7px;
@@ -1070,7 +1070,7 @@ a.edit {
 }
 /*close*/
 
-
+ 
 /*Mobile Responsive*/
 @media (max-width:900px) and (min-width: 768px){
     .order-summary-section {
@@ -1239,11 +1239,11 @@ select#month {
 }
 select#find {
     width: 200px;
-    margin-top: 10px;
+    margin-top: 10px; 
 }
 .payment-input input[type="text"] {
     width: 195px;
-}
+} 
 }
 @media (max-width:450px){    
     .payment-input input[type="text"] {
@@ -1367,7 +1367,7 @@ select#years {
 .form-input.date { 
     margin-left: 0;
 }   
-span.text-danger {
+span.text-danger { 
     margin-left: 0px !important; 
 } 
 .form-input.email span.text-danger {                                                
@@ -1398,48 +1398,30 @@ span.text-danger {
 }
 }
 
-
-
-
-
-
 .text-danger{
     color:red;
-    text-align:center ;
+    text-align:left ;
 }
-
-
 .alert-success {
     color: #155724;
     background-color: #d4edda;
     border-color: #c3e6cb;
-    padding: 20px;
+    padding: 15px; 
     margin-bottom: 20px;
-    border: 1px solid green;
+    border: 1px solid transparent;
     border-radius: 0.25rem;
-    font-size:20px;
-}
-
-
+} 
 .alert-danger {
     color: #721c24;
     background-color: #f8d7da;
     border-color: #f5c6cb;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid red;
-    border-radius: 0.25rem;
-    font-size:20px;
 }
-
 .alert-danger hr {
     border-top-color: #f1b0b7;
 }
-
 .alert-danger .alert-link {
     color: #491217;
 }
-
 .alert-danger .alert-link:hover {
     color: #491217;
 }
