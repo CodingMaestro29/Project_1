@@ -174,9 +174,9 @@
                                        <div class="form-input find-us">                                         
                                          <label>How did you find out<br> about us?</label> <select id="find" name="find">
                                                  <option value="...">...</option>
-                                                  <option value="xyz">xyz</option>
-                                                  <option value="xyz">xyz</option>
-                                                  <option value="xyz">xyz</option>
+                                                  <option value="xyz">referral from someone</option>
+                                                  <option value="xyz">Google/Bing search engine</option>
+                                                  <option value="xyz">Social Media</option>
                                             </select> 
                                             <p>How did you find our website?</p>
                                         </div>

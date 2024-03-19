@@ -6,12 +6,12 @@
         <div class="container">
           <h1 class="title">Payment Gateway</h1>
           @if(Session::has('success'))
-                <div class="alert alert-success"> 
+                <div class="alert alert-success">   
                     {{ Session::get('success') }}   
-                </div>  
+                </div>   
             @elseif(Session::has('error'))   
-                <div class="alert alert-danger">
-                    {{ Session::get('error') }} 
+                <div class="alert alert-danger"> 
+                    {{ Session::get('error') }}  
                 </div>
             @endif
                 <div class="student-dashboard-section">
@@ -24,12 +24,12 @@
                           @csrf 
                             <div class="paypal-payment-btn">
                                 <input type="hidden" name="price" value="17.95">
-                                <input type="hidden" name="product_name" value="Mature Driver">     
+                                <input type="hidden" name="product_name" value="Mature Driver">       
                                 <input type="hidden" name="quantity" value="1">     
                                 <input type="submit" value="Pay Now">
-                           </div>      
+                           </div>       
                          </form>
-                     </div>
+                     </div>      
                    </div>
                    <div class="payments">
                       <div class="paypal-payment">
@@ -54,7 +54,7 @@
                          </div>
                          </form>  
                      </div>    
-                   </div>
+                   </div> 
                  </div>
                  <div class="dashboard-tabs payment">
                     <a href="#"> Exit The Course</a>

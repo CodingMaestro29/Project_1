@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleButton.style.display = 'flex'; // Show the toggle icon when cross icon is clicked
     }); 
 });
-
     // document.addEventListener('DOMContentLoaded', function() {
     //     const toggleButton = document.getElementById('navbar-toggle');
     //     const menu = document.getElementById('navbar-menu');
@@ -49,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     faqQuestions.forEach(function (question) {
         question.addEventListener('click', function () {    
             const parent = this.parentElement;
-            const isActive = parent.classList.contains('active'); 
+            const isActive = parent.classList.contains('active');     
                      
             // Close all items  
             faqQuestions.forEach(function (q) {     
