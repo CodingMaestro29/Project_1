@@ -7,6 +7,8 @@ use Srmklive\PayPal\Services\PayPal as PayPalClient;
 use App\Models\Order;
 use App\Models\Cart;
 use Illuminate\Support\Facades\Auth;
+use App\Models\StudentCompletion;
+use App\Models\Student;
 
 class PaypalController extends Controller
 {
@@ -105,6 +107,22 @@ class PaypalController extends Controller
                     $item->status = Cart::STATUS['success']; 
                     $item->save();
                 }
+
+                $user = Student::where('email' ,auth()->user()->email )->first();
+
+                StudentCompletion::create([
+                    'user_id' => auth()->user()->id,
+                    'fname' =>  $user->fname,
+                    'mname' =>  $user->mname,
+                    'lname' =>  $user->lname,
+                    'DOB' =>  $user->date.','.$user->month.','.$user->years,
+                    'email' =>  $user->email,
+                    'license_number' =>  $user->licensenumber,
+                    'complete_time' => today(),
+                    'address' =>  $user->address,
+                    'state' =>  $user->states,
+                    'zipcode' =>  $user->zipcode,
+                ]);
 
                 return redirect()->route('payment')->with('success','payment done successfully');
              }

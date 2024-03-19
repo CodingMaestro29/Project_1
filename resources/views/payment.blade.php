@@ -60,8 +60,8 @@
                  </div>
                  <div class="dashboard-tabs payment">
                     <a href="#"> Exit The Course</a>
-                    <a href="#"> Contact Us</a>
-                    <a href="#"> Student Home</a>
+                    <a href="{{route('contact.view') }}"> Contact Us</a>
+                    <a href="{{ route('dashboard.index') }}"> Student Home</a>
                  </div>   
                </div>
          </div>   

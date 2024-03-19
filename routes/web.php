@@ -82,7 +82,10 @@ Route::get('/import', [StudentController::class , 'index'])
     ->name('import');     
 
 Route::post('/import-students', [StudentController::class , 'importStudentsFromDocx'])
-->name('import.students');   
+->name('import.students');  
+
+
+Route::get('/get-certificate', [DashboardController::class, 'getCertificate'])->name('get-certificate');
 
 Route::get('/faq',[FaqController::class , 'index'])
 ->name('faq.index');

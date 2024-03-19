@@ -13,14 +13,29 @@ class StudentCompletion extends Model
 
     protected $fillable = [
         'id',
+        'user_id',
         'fname',
         'mname',
         'lname',
         'DOB',
+        'email',
         'license_number',
         'complete_time',
         'address',
         'state',
         'zipcode',
         ];
+
+
+
+        public function user()
+        {
+            return $this->belongsTo(Student::class, 'user_id');
+        }
+
+        protected $dispatchesEvents = [
+            'created' => \App\Events\CourseCompleted::class,
+        ];
+
+
 }
