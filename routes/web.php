@@ -46,6 +46,9 @@ Route::get('/home',[AboutController::class , 'home'])
 Route::get('/contact-us',[ContactController::class , 'index'])
 ->name('contact.index');
 
+Route::get('/contact-us-login',[ContactController::class , 'view'])
+->name('contact.view');
+
 // Route::get('/course',[CourseController::class , 'index'])
 // ->name('course.index');
 

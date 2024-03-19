@@ -36,6 +36,8 @@ class AuthController extends Controller
           'password' => 'required',
         ]);
 
+       // dd('test');
+
         if(Auth::guard('student')->attempt($request->only('email','password'))){
           //  dd('test1');
             return redirect('dashboard');
@@ -128,7 +130,7 @@ class AuthController extends Controller
             'licensenumber' =>  $request->licensenumber,
             'username' =>  $request->username,
             'password' =>  bcrypt($request->password),
-            'password_confirmation' =>bcrypt($request->password),
+            'password_confirmation' =>bcrypt($request->password_confirmation),
             'address' =>  $request->address,
             'city' =>  $request->city,
             'states' =>  $request->states,
@@ -174,9 +176,30 @@ class AuthController extends Controller
     
         $email = Auth::user()->email;
     
-        $student = Student::where('email', $email)->first();
+        $student = Student::where('email', $email)->first(); 
 
-        $student->update([
+        $input = $request->all();
+
+        $recaptcha =  $input['g-recaptcha-response']; 
+
+        $secret_key = '6LfAb5gpAAAAALZdBqt9y1mKS8j438iqR89UEAb8'; 
+
+        $url = 'https://www.google.com/recaptcha/api/siteverify?secret='
+         . $secret_key . '&response=' . $recaptcha; 
+
+         $response = file_get_contents($url); 
+
+         $response = json_decode($response); 
+
+       //  dd($response);
+
+         if ($response->success == true) { 
+           session(['success_message' => 'Google reCAPTCHA verified']);
+       } else { 
+            return redirect()->back()->withErrors(['g-token' => 'Error in Google reCAPTCHA']);
+       } 
+
+       $studentData =[
             'fname' => $request->fname,
             'mname' => $request->mname,
             'lname' => $request->lname,
@@ -190,14 +213,25 @@ class AuthController extends Controller
             'licenseState' => $request->licenseState,
             'licensenumber' => $request->licensenumber,
             'username' => $request->username,
-            'password' => bcrypt($request->password),
-            'password_confirmation' => bcrypt($request->password),
-            'address' => $request->address,
+             'address' => $request->address,
             'city' => $request->city,
             'states' => $request->states,
             'zipcode' => $request->zipcode,
             'find' => $request->find,
-        ]);
+        ];
+
+
+
+
+        if ($request->filled('password')) {
+          $studentData['password'] = bcrypt($request->password);
+        }
+
+        if ($request->filled('password_confirmation')) {
+            $studentData['password_confirmation'] = bcrypt($request->password_confirmation);
+          }
+
+          $student->update($studentData);
 
 
         return redirect()->route('student.registration')->with('success','student 

@@ -976,6 +976,11 @@ input#Password {
     margin-left: -4px;
     border: 1px solid rgba(148, 148, 148, 1);
 }
+input#password_confirmation {
+    padding: 12px 4px;
+       margin-left: -4px;
+       border: 1px solid rgba(148, 148, 148, 1);
+   }
 .login-input label {
     background: rgba(238, 238, 238, 1);
     padding: 12px 10px; 

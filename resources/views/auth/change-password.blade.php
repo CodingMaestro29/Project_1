@@ -30,7 +30,7 @@
                           </div>
 
                           <div class="login-input ps">
-                              <label>Password</label>
+                              <label>Confirm</label>
                               <input type="Password" id="password_confirmation" name="password_confirmation">
                               @error('password_confirmation')
                               <div class="text-danger">{{ $message }}</div>
