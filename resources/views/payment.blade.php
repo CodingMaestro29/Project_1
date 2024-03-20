@@ -22,7 +22,7 @@
                           <form method="post" action="{{route('paypal') }}">
                           @csrf 
                             <div class="paypal-payment-btn">
-                                <input type="hidden" name="price" value="17.95">
+                                <input type="hidden" name="price" value="17.95"> 
                                 <input type="hidden" name="product_name" value="Mature Driver">       
                                 <input type="hidden" name="quantity" value="1">     
                                 <input type="submit" value="Pay Now">

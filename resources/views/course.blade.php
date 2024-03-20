@@ -111,7 +111,7 @@
                                                   <option value="xyz">xyz</option> 
                                                   <option value="xyz">xyz</option>      
                                             </select>  
-                                            <p>How did you find our website?</p>
+                                            <p>How did you find our website?</p> 
                                         </div>
                                         <div class="form-input captcha">  
                                              <img src="{{ asset('asset/images/captcha.png') }}" />

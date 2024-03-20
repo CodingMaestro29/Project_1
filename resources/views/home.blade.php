@@ -67,6 +67,7 @@
 
 
 
+
                    <div class="testimonials-section">
                      <div class="container">
                          <div class="customer-testimonial">
@@ -144,7 +145,7 @@
                              <p class="allcon">The law says it is only for drivers over 55, we have found over the years that many companies<br> and agents accept our course from age 50 and up. Call them and ask them if they will take our<br> certificate. Most will at age 50.</p>
                            </div>
 
-                            <div class="allcontent right">
+                             <div class="allcontent right">  
                              <h2>Frequently Asked Questions</h2>
                              <h3> <span>.</span>Is this a California DMV licensed mature driver course?</h3>
                              <p>Yes! We are licensed through the DMV. Our license number is MDIP000034.</p>
