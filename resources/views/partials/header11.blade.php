@@ -26,7 +26,7 @@
                     <p>15,000 plus 5 star reviews</p>
                 </div>
                 <div class="number">
-                     <h3>800-574-5643</h3>
+                     <h3><a href="tel:800-574-5643">800-574-5643</a></h3>
                      <img class="number-img" src="{{ asset('asset/images/num.png') }}" />
                       <img class="number-img" src="{{ asset('asset/images/num2.png') }}" />
                      <p>Questions? Call our Insurance Discount experts</p> 

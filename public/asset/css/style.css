@@ -6,6 +6,9 @@ img {
     width: 100%;
     height: 100%;
 }
+a {
+    text-decoration: none;
+}
 .container {
     width: 1150px;
     margin: 0 auto;
@@ -443,7 +446,7 @@ img.videoimg {
     height: auto;
 }
 .certificate-section.second {
-    margin-top: 30px;
+    margin-top: 50px;
 }
 /*.banner-images-section {
     display: flex;
@@ -471,13 +474,16 @@ img.videoimg {
     letter-spacing: 0.12em;
     padding-left: 52px;
     position: absolute;
-    top: 47px;
+    top: 38px;
 }
 .signup-btn.watch-video.start a {
     border: 1px solid rgba(162, 0, 1, 1);
     position: relative;
     margin-top: 35px;
     margin-left: 25px;
+    padding: 5px 0 20px 0;
+        width: 210px;
+
 }
 p.horizontal-text {
     font-family: Inter;
@@ -642,7 +648,7 @@ p.allcon {
 .allcontent.right {
     border: 1px solid rgba(85, 85, 85, 1);
     width: 320px;
-        padding-bottom: 15px;
+        padding-bottom: 10px;
 
 }
 .allcontent.right h2 {
@@ -1369,6 +1375,9 @@ p.login-title {
     margin: 0;
     font-family: "Inter", sans-serif;
 }
+.student-login .text-danger p {
+    text-align: center;
+}
 p.login-text {
     font-family: "Inter", sans-serif;
     font-size: 13px;
@@ -1477,6 +1486,7 @@ p.subtitle {
 }
 .submit-btn {
     position: relative;
+    cursor: pointer;
 }
 .submit-btn button {
     background: rgba(27, 188, 155, 1);
@@ -2137,11 +2147,16 @@ span.text-danger {
 }
 }
 form.login-form .text-danger {
-    color: red; 
+    color: red;
     text-align: left;
     padding-left: 10px;
     padding-top: 10px;
 }
+
+.text-danger {
+    color: red;
+    text-align: left;
+    }
 .alert-success {
     color: #155724;
     background-color: #d4edda;

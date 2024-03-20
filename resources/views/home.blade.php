@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+<div id="loader" class="loader"></div>
       <div class="container">
           <div class="main-banner-section">
                 <div class="home-banner-left-section">
@@ -40,7 +40,7 @@
                          <img class="business" src="{{ asset('asset/images/businesslogo.png') }}" />
                           <img class="sealstate" src="{{ asset('asset/images/seal-state 2.png') }}" />
                            <p><span style="font-size: 28px; padding-right: 6px;">Only </span> $<span style="font-size: 92px;"><sub>17</sub></span>.95</p>
-                           <div class="signup-btn watch-video start"><a class="course-satrt-btn" href="#"> <img class="" src="{{ asset('asset/images/startcourse.png') }}" />  Start Course<br><span>click here to start</span></a></div>
+                           <div class="signup-btn watch-video start"><a class="course-satrt-btn" href="{{ route('auth.register_view') }}"> <img class="" src="{{ asset('asset/images/startcourse.png') }}" />  Start Course<br><span>click here to start</span></a></div>
                       </div>
 
                 </div> 
@@ -54,7 +54,7 @@
                            <div class="started-content">
                              <h3>Get Started Now</h3>
                              <p>No timers. No quizzes. 100% pass final</p>
-                            <div class="signup-btn"><a href="#"> <img class="" src="{{ asset('asset/images/signup.png') }}" /> Sign-Up</a></div>
+                            <div class="signup-btn"><a href="{{ route('auth.register_view') }}"> <img class="" src="{{ asset('asset/images/signup.png') }}" /> Sign-Up</a></div>
                            </div>
                             <div class="started-content">
                              <h3>100% AI technology</h3>
@@ -94,23 +94,30 @@
                                <div class="student-login">  
                                       <p class="login-title">Student Login</p>
                                       <p class="login-text">Continue your course where you stopped</p>                         
-                                      <form class="login-form">
+                                      <form class="login-form" action="{{route('auth.login') }}" method="post">
+                                      @csrf
                                             <div class="login-input">
                                                 <label>Login User Name</label>
-                                                <input type="text" id="loginuser" name="loginuser">
+                                                <input type="text" id="loginuser"  name="email">
+                                                @error('email')
+                                               <div class="text-danger">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                             <div class="login-input ps">
                                                 <label>Password</label>
-                                                <input type="Password" id="Password" name="Password">
+                                                <input type="Password" id="Password"  name="password">
+                                                @error('password') 
+                                                <div class="text-danger">{{  $message }}</div>
+                                                @enderror
                                             </div>
                                             <div class="main-div-user">
                                               <div class="users">
-                                                 <a href="#" class="lost-password">Lost Password?</a>
+                                                 <a href="{{route('forgot.password') }}" class="lost-password">Lost Password?</a>
                                                  <a href="#" class="forget-user-name">Forgot User Name?</a>
                                               </div>
                                                <div class="submit-btn">  
                                                 <!-- <input type="submit"  value="SECURE LOGIN "> -->
-                                                <button type="submit">SECURE LOGIN</button>
+                                                <button id="secure-login-btn" class="secure-login-btn" type="submit">SECURE LOGIN</button>
                                                 <p class="subtitle">CLICK HERE TO RE-ENTER</p>
                                               </div> 
                                             </div>                                           
@@ -146,10 +153,10 @@
                              <h3> <span>.</span>How much of a discount to I receive on my auto insurance if I complete the course?</h3>
                              <p>The discount percentage varies depending on your insurance company. Contact your provider for an exact amount, but typically, you will receive a discount of anywhere from 5 to 15 percent.</p>
                              <h3> <span>.</span>How much does the course cost?</h3>
-                             <p>The cost of the course is only 17.95. The price includes ABSOLUTELY everything you need to lower your insurance rates. NO HIDDEN FEES!</p>
-                             <div class="morefaqs"><a href="#" class="more-faq">More Faqs</a></div>
+                             <p>The cost of the course is only 17.95. The price includes ABSOLUTELY everything you need to lower your insurance rates. NO HIDDEN FEES!</p> 
+                             <div class="morefaqs"><a href="{{ route('faq.index') }}" class="more-faq">More Faqs</a></div>
                            </div>
-                            
+                             
                          </div>
                      </div>
                   </div>
@@ -160,9 +167,61 @@
           <div class="home-page-last-section">
              <div class="container">
             <p class="des-last">Online mature driver school for California</p>  
-            <p class="bottom-menu"><a href="#">Privacy Policy</a> | <a href="#">Refund Policy</a> | <a href="#">Contact Us</a></p>
+            <p class="bottom-menu"><a href="{{ route('privacy.index') }}">Privacy Policy</a> | <a href="{{ route('refund.index') }}">Refund Policy</a> | <a href="{{ route('contact.index') }} ">Contact Us</a></p>
             </div>  
-          </div>
+          </div> 
+
+
+
+
+          <style>
+          
+          .secure-login-btn:hover {
+              cursor: pointer; 
+          }
+        
+        
+          .loader {
+              border: 20px solid #f3f3f3; /* Light grey */
+              border-top: 20px solid #3498db; /* Blue */
+              border-radius: 50%;
+              width: 100px;
+              height: 100px;
+              animation: spin 1s linear infinite;
+              position: fixed;
+              top: 40%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 9999; /* Ensure the loader appears above other elements */
+              display: none; /* Hide loader by default */
+          }
+        
+          @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+          }
+        
+          </style>
+        
+        
+          <script>
+          $(document).ready(function () {
+              $('#secure-login-btn').click(function () {
+                  $('#loader').show();
+              });
+          });
+        
+          </script>
+
+
+
+
+
+
+
+
+
+
 
 
 

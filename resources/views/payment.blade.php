@@ -2,7 +2,6 @@
 
 @section('content') 
 
-<div class="main-page-section">
         <div class="container">
           <h1 class="title">Payment Gateway</h1>
           @if(Session::has('success'))
@@ -37,7 +36,7 @@
                          <p>We accept secure credit card payments. To pay for course click button "Pay with card" below. You will be forwarded to paypal secure payment page where you will be able to complete payment. After payment you will receive access to course content.</p>
                           <form>
                             <div class="paypal-payment-btn">
-                                  <input type="submit" value="Pay With Card"> 
+                                  <input type="submit" value="Pay With Card">  
                            </div>
                          </form>
                      </div>
@@ -63,7 +62,7 @@
                  </div>   
                </div>
          </div>   
-    </div>
+    
 
 
 @endsection 
