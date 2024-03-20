@@ -2,6 +2,8 @@
 
 @section('content')
 
+<div id="loader" class="loader"></div>
+
 <div class="container">
 @if(Session::has('success'))
                 <div class="alert alert-success">
@@ -36,7 +38,7 @@
                             </div>
                             <div class="submit-btn">
                               <!-- <input type="submit" value="SECURE LOGIN "> -->
-                              <button type="submit" style="padding-bottom:10px;width:200px;margin-right:40px;">SUBMIT YOUR EMAIL</button>
+                              <button type="submit"  id="secure-login-btn" class="secure-login-btn" style="padding-bottom:10px;width:200px;margin-right:40px;">SUBMIT YOUR EMAIL</button>
                               </div>
                           </div>
                           
@@ -44,7 +46,50 @@
                   <img class="loginform" src="{{ asset('asset/images/loginform.png') }}" />
                  </div>   
                </div>
-         </div>   
+         </div> 
+         
+         
+
+         <style>
+          
+          .secure-login-btn:hover {
+              cursor: pointer; 
+          }
+        
+        
+          .loader {
+              border: 20px solid #f3f3f3; /* Light grey */
+              border-top: 20px solid #3498db; /* Blue */
+              border-radius: 50%;
+              width: 100px;
+              height: 100px;
+              animation: spin 1s linear infinite;
+              position: fixed;
+              top: 40%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 9999; /* Ensure the loader appears above other elements */
+              display: none; /* Hide loader by default */
+          }
+        
+          @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+          }
+        
+          </style>
+        
+        
+          <script>
+          $(document).ready(function () {
+              $('#secure-login-btn').click(function () {
+                  $('#loader').show();
+              });
+          });
+        
+          </script>
+        
+
 
 
 
