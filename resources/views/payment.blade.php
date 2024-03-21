@@ -1,6 +1,7 @@
 @extends('layouts.app11')
 
-@section('content') 
+@section('content')
+
 
 <div class="main-page-section">
         <div class="container">
@@ -23,7 +24,7 @@
                           <form method="post" action="{{route('paypal') }}">
                           @csrf
                             <div class="paypal-payment-btn">
-                            <input type="hidden" name="price" value="17.95">
+                                <input type="hidden" name="price" value="17.95">
                                 <input type="hidden" name="product_name" value="Mature Driver">
                                 <input type="hidden" name="quantity" value="1">
                         
@@ -39,7 +40,10 @@
                          <p>We accept secure credit card payments. To pay for course click button "Pay with card" below. You will be forwarded to paypal secure payment page where you will be able to complete payment. After payment you will receive access to course content.</p>
                           <form>
                             <div class="paypal-payment-btn">
-                                  <input type="submit" value="Pay With Card">
+                           
+                                  <!-- <input id="pay-card" type="submit" value="Pay With Card"> -->
+                              <a href = "{{ route('pay.card') }}"><button id="pay-card" type="button">Pay With Card</button></a>
+                                     
                            </div>
                          </form>
                      </div>
@@ -67,5 +71,7 @@
          </div>   
     </div>
 
+    
 
-@endsection 
+
+    @endsection 

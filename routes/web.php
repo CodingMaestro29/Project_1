@@ -87,6 +87,14 @@ Route::post('/import-students', [StudentController::class , 'importStudentsFromD
 
 Route::get('/get-certificate', [DashboardController::class, 'getCertificate'])->name('get-certificate');
 
+Route::get('/pay-card', [PaypalController::class, 'card_pay'])->name('pay.card');
+Route::post('/pay-card-process', [PaypalController::class, 'card_pay_process'])->name('card.process');
+
+Route::post('/set-session-success', function () {
+    session(['success' =>  "You have successfully paid with credit card"]);
+    return response()->json(['success' => "You have successfully paid with credit card"]);
+})->name('set.session.success');
+
 Route::get('/faq',[FaqController::class , 'index'])
 ->name('faq.index');
 

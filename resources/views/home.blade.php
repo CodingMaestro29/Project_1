@@ -167,7 +167,7 @@
           <div class="home-page-last-section">
              <div class="container">
             <p class="des-last">Online mature driver school for California</p>  
-            <p class="bottom-menu"><a href="#">Privacy Policy</a> | <a href="#">Refund Policy</a> | <a href="{{ route('contact.index') }} ">Contact Us</a></p>
+            <p class="bottom-menu"><a href="{{ route('privacy.index') }}">Privacy Policy</a> | <a href="{{ route('refund.index') }}">Refund Policy</a> | <a href="{{ route('contact.index') }} ">Contact Us</a></p>
             </div>  
           </div> 
 
