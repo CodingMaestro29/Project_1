@@ -330,28 +330,22 @@ class PaypalController extends Controller
                         'zipcode' =>  $user->zipcode,
                     ]);
 
-                    // $returnUrl = route('payment');
+                   
 
                      return response()->json([
                         "status" => 1,
                         "msg" => 'Transaction completed!'
                     ]);
 
-                    // $response = array('status' => 1, 'msg' => 'Transaction completed!'); 
-
-                    // return  $response ;
-
-                    // return response()->json([
-                    //     "success" => 'payment done successfully',
-                    //     "redirect" => $returnUrl
-                    // ]);
-
-                 //   return redirect()->route('payment')->with('success', 'payment done successfully');
-                }
+                 }
 
 
-                return redirect()->route('payment')->with('error', $response['message'] ?? 'something went wrong');
-            }
+           }
         }
     }
+
+
+
+
+
 }
