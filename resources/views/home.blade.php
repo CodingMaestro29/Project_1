@@ -67,7 +67,6 @@
 
 
 
-
                    <div class="testimonials-section">
                      <div class="container">
                          <div class="customer-testimonial">

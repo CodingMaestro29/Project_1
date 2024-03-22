@@ -9,6 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <!-- <script src="https://www.paypal.com/sdk/js?components=card-fields&client-id=AaDTqfjgDPOp-vEmaUnVUx8g-hczz_MCj2X2JKqA6QS5R2R7CIbX-PrHMIcBYZCse4P6-FtZb1WMg3MT"></script> -->
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    
     <script src="{{ asset('asset/js/mainjquery.js') }}"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
 </head>

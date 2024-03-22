@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div id="loader" class="loader"></div>
 <div class="container">
             <h1 class="title">Edit Registration Information</h1>
         <div class="main-section">    
@@ -84,8 +84,7 @@
                                             <select id="license" name="licenseState"  >
                                                   <option value="...">...</option>
                                                   <option value="xyz"{{ old('licenseState', $student->licenseState) == 'xyz' ? 'selected' : '' }}>xyz</option>
-                                                  <option value="xyz"{{ old('licenseState', $student->licenseState) == 'xyz' ? 'selected' : '' }}>xyz</option>
-                                                  <option value="xyz"{{ old('licenseState', $student->licenseState) == 'xyz' ? 'selected' : '' }}>xyz</option>
+                                                  
                                             </select>
                                             <span class = "text-danger">
                                               @error('licenseState')
@@ -121,7 +120,9 @@
                                        <div class="form-input date licensenumber user password">
                                           <label>* Password:  </label>
                                           <!-- <input type="password" id ="licensenumber" name="licensenumber"> -->
-                                          <input type="password" id="password" name="password" value="">
+                                          <input type="password" id="password" name="password" value="{{ old('password' ) }}">
+                                          <?php
+                                         // dd($student->password);?>
                                           <p>Password must be at least 6 characters,
                                               no more than 16 characters.</p>
                                               <span class = "text-danger">
@@ -134,7 +135,7 @@
                                        <div class="form-input date licensenumber user password confirm">
                                           <label>* Confirm password: </label>
                                           <!-- <input type="text" id ="licensenumber" name="licensenumber"> -->
-                                          <input type="password" id="password_confirmation" name="password_confirmation"  value="">
+                                          <input type="password" id="password_confirmation" name="password_confirmation"  value="{{ old('password_confirmation' ) }}">
                                           <span class = "text-danger">
                                           @error('password_confirmation')
                                                 {{$message}}
@@ -155,9 +156,7 @@
                                         <label>* State</label> 
                                          <select id="statse" name="states" value="{{ old('states',$student->states) }}">
                                                  <option value="...">...</option>
-                                                  <option value="xyz">xyz</option>
-                                                  <option value="xyz">xyz</option>
-                                                  <option value="xyz">xyz</option>
+                                                 <option value="xyz" {{ old('states', $student->states) == 'xyz' ? 'selected' : '' }}>xyz</option>
                                             </select> 
                                         </div>
                                        <div class="form-input zipcode">  
@@ -170,18 +169,29 @@
 
                                        <div class="form-input find-us">                                         
                                          <label>How did you find out<br> about us?</label> <select id="find" name="find"  value="{{ old('find',$student->find) }}">
-                                                 <option value="...">...</option>
-                                                  <option value="xyz">xyz</option>
-                                                  <option value="xyz">xyz</option>
-                                                  <option value="xyz">xyz</option>
+                                         <option value="..." {{ old('find', $student->find) == '...' ? 'selected' : '' }}>...</option>
+                                         <option value="someone" {{ old('find', $student->find) == 'someone' ? 'selected' : '' }}>referral from someone</option>
+                                          <option value="insurance" {{ old('find', $student->find) == 'insurance' ? 'selected' : '' }}>Referral from an Insurance company</option>
+                                          <option value="google" {{ old('find', $student->find) == 'google' ? 'selected' : '' }}>Google</option>
+                                          <option value="bing" {{ old('find', $student->find) == 'bing' ? 'selected' : '' }}>Bing</option>
+                                          <option value="dmv" {{ old('find', $student->find) == 'dmv' ? 'selected' : '' }}>DMV website</option>
+                                          <option value="radio" {{ old('find', $student->find) == 'radio' ? 'selected' : '' }}>Radio advertisement</option>
+                                          <option value="tv" {{ old('find', $student->find) == 'tv' ? 'selected' : '' }}>TV advertisement</option>
+                                          <option value="newspaper" {{ old('find', $student->find) == 'newspaper' ? 'selected' : '' }}>Newspaper or magazine article</option>
+                                          <option value="testimonials" {{ old('find', $student->find) == 'testimonials' ? 'selected' : '' }}>TESTIMONIALS PAGE</option>
                                             </select> 
                                             <p>How did you find our website?</p>
                                         </div>
                                         <div class="form-input captcha">  
-                                             <img src="{{ asset('asset/images/captcha.png') }}" />
+                                             <!-- <img src="{{ asset('asset/images/captcha.png') }}" /> -->
+                                             <div class="g-recaptcha" data-name="g-token" data-sitekey="6LfAb5gpAAAAAPO3Sa2gEvH3p3xARh_SlyeHymm4">
+                                             
+                                             </div>
+                                             <span class="text-success">{{ session('success_message') }}</span>
+                                             <span class="text-danger">{{ $errors->first('g-token') }}</span>
                                         </div>
                                       <div class="btn"> <img src="{{ asset('asset/images/submiticon.png') }}" />
-                                      <input type="submit" value="Update"></div>
+                                      <input  id="secure-login-btn" class="secure-login-btn" type="submit" value="Update"></div>
                                       <!-- <button type="submit">SIGN UP</button> -->
                                       <img class="mirrorimage" src="{{ asset('asset/images/btnmerror.png') }}" />
                                 </form>
@@ -213,7 +223,126 @@
                     <img class="privacy" src="{{ asset('asset/images/img_privacyguarantee 1.png') }}" />
                 </div>
            </div>
-         </div>   
+         </div>  
+         
+         
+
+         <script>
+    
+    $(document).ready(function () {
+        
+        var jsonPath = "{{ asset('json/states_hash.json') }}";
+
+        var selectBox = $('#statse');
+        var selectBox11 = $('#license');
+
+        selectBox.empty();
+        selectBox11.empty();
+
+        
+        selectBox.append($('<option>', {
+            value: '...',
+            text: '...'
+        }));
+
+        selectBox11.append($('<option>', {
+            value: '...',
+            text: '...'
+        }));
+
+        
+        $.getJSON(jsonPath, function (data) {
+         $.each(data, function (key, value) {
+               // selectBox.append($('<option>', {
+                    // value: key,
+                    // text: value
+             //   }));
+
+             var option = $('<option>', {
+                value: key,
+                text: value
+            });
+
+
+            if (key == '{{ old('states', $student->states) }}') {
+                option.attr('selected', 'selected'); 
+            }
+
+                 selectBox.append(option);
+
+                // selectBox11.append($('<option>', {
+                //     value: key,
+                //     text: key
+                // }));
+
+                var option11 = $('<option>', {
+                value: key,
+                text: key
+                 });
+
+
+                 if (key == '{{ old('licenseState', $student->licenseState) }}') {
+                option11.attr('selected', 'selected'); 
+            }
+
+                 selectBox11.append(option11);
+
+
+            });
+        });
+    });
+</script> 
+
+
+
+
+
+<style>
+          
+  .secure-login-btn:hover {
+      cursor: pointer; 
+  }
+
+
+  .loader {
+      border: 20px solid #f3f3f3; /* Light grey */
+      border-top: 20px solid #3498db; /* Blue */
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      animation: spin 1s linear infinite;
+      position: fixed;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999; /* Ensure the loader appears above other elements */
+      display: none; /* Hide loader by default */
+  }
+
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }
+
+  </style>
+
+
+  <script>
+  $(document).ready(function () {
+      $('#secure-login-btn').click(function () {
+          $('#loader').show();
+      });
+  });
+
+  </script>
+
+         
+
+
+
+
+
+
 
 
 

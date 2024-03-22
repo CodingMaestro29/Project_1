@@ -1,6 +1,7 @@
 @extends('layouts.app11')
 
-@section('content') 
+@section('content')
+
 
         <div class="container">
           <h1 class="title">Payment Gateway</h1>
@@ -57,12 +58,14 @@
                  </div>
                  <div class="dashboard-tabs payment">
                     <a href="#"> Exit The Course</a>
-                    <a href="#"> Contact Us</a>
-                    <a href="#"> Student Home</a>
+                    <a href="{{route('contact.view') }}"> Contact Us</a>
+                    <a href="{{ route('dashboard.index') }}"> Student Home</a>
                  </div>   
                </div>
          </div>   
     
 
+    
 
-@endsection 
+
+    @endsection 

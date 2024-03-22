@@ -5,7 +5,7 @@
 <script src= 
         "https://www.google.com/recaptcha/api.js" async defer> 
     </script> 
-
+<div id="loader" class="loader"></div>
 <div class="container">
             <h1 class="title">Registration Information</h1>
         <div class="main-section">    
@@ -174,9 +174,15 @@
                                        <div class="form-input find-us">                                         
                                          <label>How did you find out<br> about us?</label> <select id="find" name="find">
                                                  <option value="...">...</option>
-                                                  <option value="xyz">referral from someone</option>
-                                                  <option value="xyz">Google/Bing search engine</option>
-                                                  <option value="xyz">Social Media</option>
+                                                  <option value="someone">referral from someone</option>
+                                                  <option value="insurance">Referral from an Insurance company</option>
+                                                  <option value="google">Google</option>
+                                                  <option value="bing">Bing</option>
+                                                  <option value="dmv">DMV website</option>
+                                                  <option value="radio">Radio advertisement</option>
+                                                  <option value="tv">TV advertisement</option>
+                                                  <option value="newspaper">Newspaper or magazine article</option>
+                                                  <option value="testimonials">TESTIMONIALS PAGE</option>
                                             </select> 
                                             <p>How did you find our website?</p>
                                         </div>
@@ -192,7 +198,7 @@
                                             
                                           </div>
                                       <div class="btn"> <img src="{{ asset('asset/images/submiticon.png') }}" />
-                                      <input type="submit" value="SIGN UP">
+                                      <input id="secure-login-btn" class="secure-login-btn" type="submit" value="SIGN UP">
                                       <!-- <button type="submit">SIGN UP</button> -->
                                       </div>
                                       <img class="mirrorimage" src="{{ asset('asset/images/btnmerror.png') }}" />
@@ -269,6 +275,48 @@
         });
     });
 </script>
+
+
+<style>
+          
+  .secure-login-btn:hover {
+      cursor: pointer; 
+  }
+
+
+  .loader {
+      border: 20px solid #f3f3f3; /* Light grey */
+      border-top: 20px solid #3498db; /* Blue */
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      animation: spin 1s linear infinite;
+      position: fixed;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999; /* Ensure the loader appears above other elements */
+      display: none; /* Hide loader by default */
+  }
+
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }
+
+  </style>
+
+
+  <script>
+  $(document).ready(function () {
+      $('#secure-login-btn').click(function () {
+          $('#loader').show();
+      });
+  });
+
+  </script>
+
+
          
          
         

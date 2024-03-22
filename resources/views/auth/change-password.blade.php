@@ -18,7 +18,7 @@
                     <div class="student-login">  
                     <p class="login-title">Reset password Form</p>
                    <p class="login-text">Continue your course where you stopped</p>                         
-                    <form class="login-form" action="{{route('process.password') }}" method="post">
+                    <form class="login-form" action="{{route('process.reset') }}" method="post">
                     @csrf
                     <input type="hidden" name="token" value = "{{ $token }}">
                     <div class="login-input ps">
@@ -30,7 +30,7 @@
                           </div>
 
                           <div class="login-input ps">
-                              <label>Password</label>
+                              <label>Confirm</label>
                               <input type="Password" id="password_confirmation" name="password_confirmation">
                               @error('password_confirmation')
                               <div class="text-danger">{{ $message }}</div>

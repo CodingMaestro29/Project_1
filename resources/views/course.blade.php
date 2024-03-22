@@ -66,6 +66,8 @@
                                           <input type="text" id ="licensenumber" name="licensenumber">
                                           <p>Do not include any spaces or dashes</p>
                                        </div>       
+
+                                       
                                        <div class="border-line"></div>
                                          <div class="form-input date licensenumber user">
                                           <label>* User Name:   </label> 

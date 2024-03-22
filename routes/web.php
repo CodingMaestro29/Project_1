@@ -46,6 +46,9 @@ Route::get('/home',[AboutController::class , 'home'])
 Route::get('/contact-us',[ContactController::class , 'index'])
 ->name('contact.index');
 
+Route::get('/contact-us-login',[ContactController::class , 'view'])
+->name('contact.view');
+
 // Route::get('/course',[CourseController::class , 'index'])
 // ->name('course.index');
 
@@ -54,6 +57,9 @@ Route::get('login',[AuthController::class , 'index'])
 
  Route::post('login',[AuthController::class , 'login'])
  ->name('auth.login');
+
+ Route::post('login-home',[AuthController::class , 'login_home'])
+ ->name('login.home');
 
  
 
@@ -73,13 +79,24 @@ Route::get('forgot-password',[AuthController::class , 'forgotPassword'])
     ->name('reset.password');
 
     Route::post('process-reset-password',[AuthController::class , 'processResetPassword'])
-    ->name('process.password'); 
+    ->name('process.reset'); 
 
 Route::get('/import', [StudentController::class , 'index'])
     ->name('import');     
 
 Route::post('/import-students', [StudentController::class , 'importStudentsFromDocx'])
-->name('import.students');   
+->name('import.students');  
+
+
+Route::get('/get-certificate', [DashboardController::class, 'getCertificate'])->name('get-certificate');
+
+Route::get('/pay-card', [PaypalController::class, 'card_pay'])->name('pay.card');
+Route::post('/pay-card-process', [PaypalController::class, 'card_pay_process'])->name('card.process');
+
+Route::post('/set-session-success', function () {
+    session(['success' =>  "You have successfully paid with credit card"]);
+    return response()->json(['success' => "You have successfully paid with credit card"]);
+})->name('set.session.success');
 
 Route::get('/faq',[FaqController::class , 'index'])
 ->name('faq.index');

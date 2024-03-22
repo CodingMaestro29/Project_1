@@ -2,8 +2,18 @@
 
 @section('content')
 
+<div id="loader" class="loader"></div>
 <div class="container">
           <h1 class="title">Secure Login - 100% Secure</h1>
+          @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+            @elseif(Session::has('error'))
+                <div class="alert alert-danger">
+                    {{ Session::get('error') }}
+                </div>
+            @endif
                 <div class="student-login-section">
                        
                     <p class="refund-policy">Login To The Course</p>  
@@ -39,7 +49,7 @@
                             </div>
                             <div class="submit-btn">
                               <!-- <input type="submit" value="SECURE LOGIN "> -->
-                              <button type="submit">SECURE LOGIN</button>
+                              <button id="secure-login-btn" class="secure-login-btn" type="submit">SECURE LOGIN</button>
                               <p class="subtitle">CLICK HERE TO RE-ENTER</p>
                             </div>
                           </div>
@@ -48,7 +58,48 @@
                   <img class="loginform" src="{{ asset('asset/images/loginform.png') }}" />
                  </div>   
                </div>
-         </div>   
+         </div> 
+         
+         
+  <style>
+          
+  .secure-login-btn:hover {
+      cursor: pointer; 
+  }
+
+
+  .loader {
+      border: 20px solid #f3f3f3; /* Light grey */
+      border-top: 20px solid #3498db; /* Blue */
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      animation: spin 1s linear infinite;
+      position: fixed;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999; /* Ensure the loader appears above other elements */
+      display: none; /* Hide loader by default */
+  }
+
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }
+
+  </style>
+
+
+  <script>
+  $(document).ready(function () {
+      $('#secure-login-btn').click(function () {
+          $('#loader').show();
+      });
+  });
+
+  </script>
+
 
 
 

@@ -42,7 +42,7 @@
                  </div>
                  <div class="dashboard-tabs">
                     <a href="#"> Exit The Course</a>
-                    <a href="{{route('contact.index') }}"> Contact Us</a>
+                    <a href="{{route('contact.view') }}"> Contact Us</a>
                     <a href="{{route('dashboard.index') }}"> Student Home</a>
                  </div>   
                </div>
