@@ -22,7 +22,7 @@
                            <p>Or Next Day FedEx Delivery</p>
                         </div>
                         <div class="certificate-details">
-                           <h3><img class="checkmark" src="{{ asset('asset/images/checkmark.png') }}" /><span style="color:rgba(208, 0, 0, 1);">FREE</span>Completion Certificate</h3>
+                           <h3><img class="checkmark" src="{{ asset('asset/images/checkmark.png') }}" /><span style="color:rgba(208, 0, 0, 1);">FREE </span>Completion Certificate</h3>
                            <p>100.00% Passing Rate</p>
                         </div>
                       </div>
@@ -75,7 +75,7 @@
                              <div class="testimonials-content">
                               <div class="text-des">
                                  <h3>“I finished just like <br>that.” It was great.”</h3>
-                                 <p class="testimonials-title">Los Angeles,<br> CA</p>
+                                 <p class="testimonials-title"><span style="color:rgba(27, 188, 155, 1);padding-right:30px;">Joyce R</span><br>San Diego,<br> CA</p>
                                </div>
                                <div class="testimonials-img"><img class="" src="{{ asset('asset/images/testimageone.png') }}" /></div>
                              </div>
@@ -86,7 +86,7 @@
                              <div class="testimonials-content">
                               <div class="text-des">
                                  <h3>“The best thing I <br>have ever signed<br> up for on the<br> internet.”</h3>
-                                 <p class="testimonials-title">Los Angeles,<br> CA</p>
+                                 <p class="testimonials-title"><span style="color:rgba(27, 188, 155, 1);padding-right:30px;">Christopher H</span><br>Los Angeles,<br> CA</p>
                                </div>
                                <div class="testimonials-img"><img class="" src="{{ asset('asset/images/testiimagetwo.png') }}" /></div>
                              </div>
@@ -171,8 +171,8 @@
 
           <div class="home-page-last-section">
              <div class="container">
-            <p class="des-last">Online mature driver school for California</p>  
-            <p class="bottom-menu"><a href="{{ route('privacy.index') }}">Privacy Policy</a> | <a href="{{ route('refund.index') }}">Refund Policy</a> | <a href="{{ route('contact.index') }} ">Contact Us</a></p>
+            <!-- <p class="des-last">Online mature driver school for California</p>   -->
+            <!-- <p class="bottom-menu"><a href="{{ route('privacy.index') }}">Privacy Policy</a> | <a href="{{ route('refund.index') }}">Refund Policy</a> | <a href="{{ route('contact.index') }} ">Contact Us</a></p> -->
             </div>  
           </div> 
 

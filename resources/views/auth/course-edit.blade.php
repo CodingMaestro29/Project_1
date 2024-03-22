@@ -170,9 +170,15 @@
                                        <div class="form-input find-us">                                         
                                          <label>How did you find out<br> about us?</label> <select id="find" name="find"  value="{{ old('find',$student->find) }}">
                                          <option value="..." {{ old('find', $student->find) == '...' ? 'selected' : '' }}>...</option>
-                                          <option value="someone" {{ old('find', $student->find) == 'someone' ? 'selected' : '' }}>referral from someone</option>
-                                          <option value="google" {{ old('find', $student->find) == 'google' ? 'selected' : '' }}>Google/Bing search engine</option>
-                                          <option value="social" {{ old('find', $student->find) == 'social' ? 'selected' : '' }}>Social Media</option>
+                                         <option value="someone" {{ old('find', $student->find) == 'someone' ? 'selected' : '' }}>referral from someone</option>
+                                          <option value="insurance" {{ old('find', $student->find) == 'insurance' ? 'selected' : '' }}>Referral from an Insurance company</option>
+                                          <option value="google" {{ old('find', $student->find) == 'google' ? 'selected' : '' }}>Google</option>
+                                          <option value="bing" {{ old('find', $student->find) == 'bing' ? 'selected' : '' }}>Bing</option>
+                                          <option value="dmv" {{ old('find', $student->find) == 'dmv' ? 'selected' : '' }}>DMV website</option>
+                                          <option value="radio" {{ old('find', $student->find) == 'radio' ? 'selected' : '' }}>Radio advertisement</option>
+                                          <option value="tv" {{ old('find', $student->find) == 'tv' ? 'selected' : '' }}>TV advertisement</option>
+                                          <option value="newspaper" {{ old('find', $student->find) == 'newspaper' ? 'selected' : '' }}>Newspaper or magazine article</option>
+                                          <option value="testimonials" {{ old('find', $student->find) == 'testimonials' ? 'selected' : '' }}>TESTIMONIALS PAGE</option>
                                             </select> 
                                             <p>How did you find our website?</p>
                                         </div>

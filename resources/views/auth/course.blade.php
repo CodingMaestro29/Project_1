@@ -175,8 +175,14 @@
                                          <label>How did you find out<br> about us?</label> <select id="find" name="find">
                                                  <option value="...">...</option>
                                                   <option value="someone">referral from someone</option>
-                                                  <option value="google">Google/Bing search engine</option>
-                                                  <option value="social">Social Media</option>
+                                                  <option value="insurance">Referral from an Insurance company</option>
+                                                  <option value="google">Google</option>
+                                                  <option value="bing">Bing</option>
+                                                  <option value="dmv">DMV website</option>
+                                                  <option value="radio">Radio advertisement</option>
+                                                  <option value="tv">TV advertisement</option>
+                                                  <option value="newspaper">Newspaper or magazine article</option>
+                                                  <option value="testimonials">TESTIMONIALS PAGE</option>
                                             </select> 
                                             <p>How did you find our website?</p>
                                         </div>
