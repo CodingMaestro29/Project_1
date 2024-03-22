@@ -16,25 +16,25 @@
                   <h3 class="insu-sub-heading">Just by Taking this Official Licensed Course</h3>
                   <h3 class="headings-content">When you finish. You give your insurance agent your completion<br> certificate. So easy.</h3>
 
-                      <div class="certificate-section">
+                      <div class="certificate-section"> 
                         <div class="certificate-details">
                            <h3> <img class="checkmark" src="{{ asset('asset/images/checkmark.png') }}" /> <span style="color:rgba(208, 0, 0, 1);">FREE</span> 1st Class Shipping</h3>
                            <p>Or Next Day FedEx Delivery</p>
                         </div>
-                        <div class="certificate-details">
+                        <div class="certificate-details">       
                            <h3><img class="checkmark" src="{{ asset('asset/images/checkmark.png') }}" /><span style="color:rgba(208, 0, 0, 1);">FREE</span>Completion Certificate</h3>
-                           <p>100.00% Passing Rate</p>
-                        </div>
+                           <p>100.00% Passing Rate</p>      
+                        </div> 
                       </div>
-                      <div class="certificate-section second">
-                        <div class="certificate-details">
+                      <div class="certificate-section second">  
+                        <div class="certificate-details"> 
                            <h3> <img class="checkmark" src="{{ asset('asset/images/checkmark.png') }}" /> Unlimited Course Attempts</h3>
-                           <p>Retake Until You Pass!</p>
-                        </div>
-                        <div class="certificate-details book-format">
+                           <p>Retake Until You Pass!</p> 
+                        </div> 
+                        <div class="certificate-details book-format"> 
                            <h3><img class="checkmark" src="{{ asset('asset/images/checkmark.png') }}" />Open Book Format</h3>
-                           <p>Get Help When You Need</p>
-                        </div>
+                           <p>Get Help When You Need</p> 
+                        </div> 
                       </div>
                       <div class="banner-images-section">
                          <img class="business" src="{{ asset('asset/images/businesslogo.png') }}" />
@@ -146,16 +146,16 @@
                            </div>
 
                              <div class="allcontent right">  
-                             <h2>Frequently Asked Questions</h2>
-                             <h3> <span>.</span>Is this a California DMV licensed mature driver course?</h3>
-                             <p>Yes! We are licensed through the DMV. Our license number is MDIP000034.</p>
-                              <h3> <span>.</span>What is the Mature Driver Improvement Course?</h3>
-                             <p>Any California resident over the age of 55 is eligible to receive a discount on your auto insurance premium if they complete the mature driver course. It consists of 10 chapters of reading material and answering questions, and there is a 25 question final exam at the end. Once you complete the course and the final, we will mail you a certificate of completion to present to your insurance company.</p>
-                             <h3> <span>.</span>How much of a discount to I receive on my auto insurance if I complete the course?</h3>
-                             <p>The discount percentage varies depending on your insurance company. Contact your provider for an exact amount, but typically, you will receive a discount of anywhere from 5 to 15 percent.</p>
-                             <h3> <span>.</span>How much does the course cost?</h3>
-                             <p>The cost of the course is only 17.95. The price includes ABSOLUTELY everything you need to lower your insurance rates. NO HIDDEN FEES!</p> 
-                             <div class="morefaqs"><a href="{{ route('faq.index') }}" class="more-faq">More Faqs</a></div>
+                                <h2>Frequently Asked Questions</h2>
+                                <h3> <span>.</span>Is this a California DMV licensed mature driver course?</h3>
+                                <p>Yes! We are licensed through the DMV. Our license number is MDIP000034.</p>
+                                  <h3> <span>.</span>What is the Mature Driver Improvement Course?</h3>
+                                <p>Any California resident over the age of 55 is eligible to receive a discount on your auto insurance premium if they complete the mature driver course. It consists of 10 chapters of reading material and answering questions, and there is a 25 question final exam at the end. Once you complete the course and the final, we will mail you a certificate of completion to present to your insurance company.</p>
+                                <h3> <span>.</span>How much of a discount to I receive on my auto insurance if I complete the course?</h3>
+                                <p>The discount percentage varies depending on your insurance company. Contact your provider for an exact amount, but typically, you will receive a discount of anywhere from 5 to 15 percent.</p>
+                                <h3> <span>.</span>How much does the course cost?</h3>
+                                <p>The cost of the course is only 17.95. The price includes ABSOLUTELY everything you need to lower your insurance rates. NO HIDDEN FEES!</p> 
+                                <div class="morefaqs"><a href="{{ route('faq.index') }}" class="more-faq">More Faqs</a></div>
                            </div>
                              
                          </div>
@@ -180,8 +180,6 @@
           .secure-login-btn:hover {
               cursor: pointer; 
           }
-        
-        
           .loader {
               border: 20px solid #f3f3f3; /* Light grey */
               border-top: 20px solid #3498db; /* Blue */

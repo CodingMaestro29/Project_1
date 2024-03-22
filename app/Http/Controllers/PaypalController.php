@@ -15,10 +15,8 @@ class PaypalController extends Controller
         return view('payment');
     }
 
-
         public function paypal(Request $request)
         {
-
             $provider = new PayPalClient;
             $config = config('paypal');
             $provider->setApiCredentials($config);
@@ -66,8 +64,6 @@ class PaypalController extends Controller
         
              }
 
-            
-
           //   return redirect($order['links'][1]['href']);
             
         }
@@ -79,8 +75,8 @@ class PaypalController extends Controller
             $provider = new PayPalClient;
             $config = config('paypal');
             $provider->setApiCredentials($config);
-             $provider->getAccessToken();
-             $response = $provider->capturePaymentOrder($request['token']);
+            $provider->getAccessToken();
+            $response = $provider->capturePaymentOrder($request['token']);
 
           //   dd( $response);
 
@@ -96,7 +92,7 @@ class PaypalController extends Controller
                     'user_id' => auth()->user()->id,
                     'product_id' =>  $item->id,
                     'payment_method' =>  'Paypal',
-                    'email' =>  auth()->user()->email,
+                    'email' =>  auth()->user()->email, 
                     'payment_id' =>   $item->payment_id,
                     'status' =>  Cart::STATUS['success'],
                     'amount' =>  $item->price,

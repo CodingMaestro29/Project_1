@@ -92,10 +92,10 @@
                                        <div class="form-input states">  
                                         <label>* State</label> 
                                          <select id="statse" name="states">
-                                                  <option value="...">...</option>
-                                                  <option value="xyz">xyz</option>
-                                                  <option value="xyz">xyz</option> 
-                                                  <option value="xyz">xyz</option>
+                                                <option value="...">...</option>
+                                                <option value="xyz">xyz</option>
+                                                <option value="xyz">xyz</option> 
+                                                <option value="xyz">xyz</option>
                                           </select>    
                                         </div>
                                       <div class="form-input zipcode">  

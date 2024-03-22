@@ -22,10 +22,6 @@ class StudentController extends Controller
 
 
 
-
-
-
-
     public function importStudentsFromDocx(Request $request)
     {
    // $realPath =  public_path('docx/111.docx');
