@@ -36,15 +36,30 @@ class AuthController extends Controller
           'password' => 'required',
         ]);
 
-       // dd('test');
-
-        if(Auth::guard('student')->attempt($request->only('email','password'))){
+    if(Auth::guard('student')->attempt($request->only('email','password'))){
           //  dd('test1');
             return redirect('dashboard');
            }else{
          //   dd('test2');
          return redirect('login')->withErrors(['login' => 'Invalid login details']);
-           }
+        }
+    }
+
+
+
+    public function login_home(Request $request)
+    {
+        $request->validate(
+        [
+        'email' => 'required|email',
+          'password' => 'required',
+        ]);
+
+    if(Auth::guard('student')->attempt($request->only('email','password'))){
+          return redirect('dashboard');
+           }else{
+         return redirect('home')->withErrors(['login' => 'Invalid login details']);
+        }
     }
 
 

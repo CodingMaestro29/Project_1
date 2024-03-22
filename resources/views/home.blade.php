@@ -93,8 +93,13 @@
                             </div>
                                <div class="student-login">  
                                       <p class="login-title">Student Login</p>
+                                      @if ($errors->has('login'))
+                                      <div class="text-danger"><p>
+                                          {{ $errors->first('login') }}
+                                    </p></div>
+                                        @endif
                                       <p class="login-text">Continue your course where you stopped</p>                         
-                                      <form class="login-form" action="{{route('auth.login') }}" method="post">
+                                      <form class="login-form" action="{{route('login.home') }}" method="post">
                                       @csrf
                                             <div class="login-input">
                                                 <label>Login User Name</label>

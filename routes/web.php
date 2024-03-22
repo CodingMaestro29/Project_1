@@ -58,6 +58,9 @@ Route::get('login',[AuthController::class , 'index'])
  Route::post('login',[AuthController::class , 'login'])
  ->name('auth.login');
 
+ Route::post('login-home',[AuthController::class , 'login_home'])
+ ->name('login.home');
+
  
 
  Route::get('register',[AuthController::class , 'register_view'])
