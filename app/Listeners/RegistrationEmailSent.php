@@ -72,7 +72,7 @@ class RegistrationEmailSent implements ShouldQueue
 
         Mail::to($email)->send(new RegistrationNotifyEmail($formData));
 
-        Mail::to('nishima7777@gmail.com')->send(new RegistrationNotifyEmail($formData));
+        Mail::to('companyuiux@gmail.com')->send(new RegistrationNotifyEmail($formData));
 
 
     }
