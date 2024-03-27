@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Event;
 use  App\Events\CourseCompleted;
 use App\Listeners\SendCourseCompletionEmail;
 
+use  App\Events\NewRegistration;
+use App\Listeners\RegistrationEmailSent;
+
 class EventServiceProvider extends ServiceProvider
 {
     /**
@@ -25,6 +28,10 @@ class EventServiceProvider extends ServiceProvider
 
         CourseCompleted::class => [
             SendCourseCompletionEmail ::class,
+        ],
+
+        NewRegistration::class => [
+            RegistrationEmailSent ::class,
         ],
     ];
 

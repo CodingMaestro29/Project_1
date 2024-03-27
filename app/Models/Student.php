@@ -60,7 +60,13 @@ class Student extends Authenticatable implements AuthenticatableContract
     public function carts()
     {
         return $this->hasMany(Cart::class, 'user_id');
-    }
+    } 
+
+
+
+    protected $dispatchesEvents = [
+        'created' => \App\Events\NewRegistration::class,
+    ];
 
 
 

@@ -18,7 +18,10 @@
                 <div class="home-banner-right-section">
                   <h2 class="banner-heading">Are you over 55? Take our fast and easy course<br> to save up to 15% on your insurance</h2>
                   <p class="sub-text">California Code Section 11628.3.</p>
-                  <h2 class="insurance-heading">In over 25 years we have <span style="color:rgba(208, 0, 0, 1);">saved over 1,000,000 people</span><br> money on their insurance bills.</h2>
+                  <!-- <h2 class="insurance-heading">In over 25 years we have <span style="color:rgba(208, 0, 0, 1);">saved over 1,000,000 people</span><br> money on their insurance bills.</h2> -->
+                  <h2 class="insurance-heading">How can you
+                    <span style="color:rgba(208, 0, 0, 1);">save money on your insurance
+                  </span><br>  too like millions of others have?</h2>
                   <h3 class="insu-sub-heading">Just by Taking this Official Licensed Course</h3>
                   <h3 class="headings-content">When you finish. You give your insurance agent your completion<br> certificate. So easy.</h3>
 
