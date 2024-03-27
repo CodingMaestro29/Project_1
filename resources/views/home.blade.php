@@ -6,7 +6,13 @@
       <div class="container">
           <div class="main-banner-section">
                 <div class="home-banner-left-section">
-                  <div class="img"><img class="videoimg" src="{{ asset('asset/images/homemainimg.png') }}" />  <div class=""><a href="#"><img class="videoicon" src="{{ asset('asset/images/videoicon.png') }}" /></a></div></div>
+                  <div class="img">
+                    <!-- <img id="posterImage" class="videoimg" src="{{ asset('asset/images/homemainimg.png') }}" />   -->
+                    <video id="videoPlayer" class="video-display" width="360" height="auto" poster="{{ asset('asset/images/homemainimg.png') }}" >
+                    <source src="{{ asset('asset/videos/welcome.mp4') }}" type="video/mp4">
+                    </video>
+                    <div class=""><a href="#" id="playButton">
+                      <img class="videoicon" src="{{ asset('asset/images/videoicon.png') }}" /></a></div></div>
                   
                 </div>  
                 <div class="home-banner-right-section">
@@ -205,6 +211,13 @@
               0% { transform: rotate(0deg); }
               100% { transform: rotate(360deg); }
           }
+
+
+          .video-display {
+          height: 640px;
+          object-fit: cover;
+          object-position: center;
+          }
         
           </style>
         
@@ -216,7 +229,33 @@
               });
           });
         
-          </script>
+          </script> 
+
+
+<script>
+    
+    var videoPlayer = document.getElementById('videoPlayer');
+    var playButton = document.getElementById('playButton');
+  
+
+
+    
+    playButton.addEventListener('click', function() {
+        videoPlayer.play();
+        playButton.style.display = 'none';
+        videoPlayer.setAttribute('controls', '');
+    });
+
+
+    videoPlayer.addEventListener('ended', function() {
+      videoPlayer.setAttribute('poster', "{{ asset('asset/images/homemainimg.png') }}");
+        videoPlayer.removeAttribute('controls');
+        playButton.style.display = 'block';
+    });
+
+
+
+</script>
 
 
 

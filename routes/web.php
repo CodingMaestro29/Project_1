@@ -36,6 +36,9 @@ Route::get('/', function () {
 });
 
 
+
+
+
 Route::get('/about-us',[AboutController::class , 'index'])
 ->name('about.index');
 

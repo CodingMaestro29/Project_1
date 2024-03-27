@@ -43,8 +43,7 @@
                            
                                   <!-- <input id="pay-card" type="submit" value="Pay With Card"> -->
                               <a href = "{{ route('pay.card') }}"><button id="pay-card" type="button">Pay With Card</button></a>
-                                     
-                           </div>
+                              </div>
                          </form>
                      </div>
                    </div>
@@ -71,7 +70,6 @@
          </div>   
     </div>
 
-    
 
-
-    @endsection 
+   
+@endsection 
