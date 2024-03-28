@@ -19,10 +19,13 @@ class PaymentNotifyEmail extends Mailable
 
      public $formData;
 
+    
 
-    public function __construct($formData)
+
+    public function __construct($formData )
     {
         $this->formData =  $formData;
+        
     }
 
     /**
@@ -43,6 +46,7 @@ class PaymentNotifyEmail extends Mailable
         return new Content(
             view: 'email.invoice-email',
             with: $this->formData
+             
         );
     }
 

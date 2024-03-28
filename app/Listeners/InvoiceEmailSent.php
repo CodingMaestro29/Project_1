@@ -69,7 +69,9 @@ class InvoiceEmailSent  implements ShouldQueue
 
 
            
-           $pdf = Pdf::loadView('email.invoice-email', ['formData' => $formData]);
+           $pdf = Pdf::loadView('email.invoice-pdf', ['formData' => $formData]);
+
+        
 
         
            $pdfPath = storage_path('app/public/invoice.pdf');
@@ -77,17 +79,10 @@ class InvoiceEmailSent  implements ShouldQueue
 
            $mail = new PaymentNotifyEmail($formData);
 
-           $mail->attach($pdfPath);
+            $mail->attach($pdfPath);
 
-           Mail::to([$email, 'companyuiux@gmail.com'] )->send($mail);
+            Mail::to([$email, 'companyuiux@gmail.com'] )->send($mail);
 
-       //    Mail::to('companyuiux@gmail.com')->send($mail);
-
-
-        // Mail::to($email)->send(new PaymentNotifyEmail($formData))->attach($pdfPath);
-
-
-
-
+      
     }
 }

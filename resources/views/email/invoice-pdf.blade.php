@@ -38,7 +38,7 @@
             margin-bottom: 20px;
         }
         .address-section div {
-            width: 48%;
+            width: 100%;
         }
 
         .panel {
@@ -104,44 +104,40 @@
         <h3>Payment Id #{{ $formData['payment_id'] }} </h3>
     </div>
     <hr>
-    <div class="row">
-        <div class="address-section">
-        
-        <div class="col-xl-6">
-             <address>
+    <div class="row address-section">
+        <div class="col-md-6">
+            
                 <strong>Billed To:</strong><br>
                 {{ $formData['name'] }}<br>
                 {{ $formData['address'] }}<br>
                 {{ $formData['city'] }}<br>
                 {{ $formData['state'] }}&nbsp;&nbsp;{{ $formData['zipcode'] }}
-            </address>
+           
         </div>
         <div class="col-xl-6 text-end">
-            <address>
+           
                 <strong>Invoice From:</strong><br>
                 over55maturedrivingcourse<br>
                 terryhaggin@gmail.com<br>
                 800-574-5643
-             </address>
-        </div>
+            
     </div>
     </div>
-    <div class="row">
-         <div class="address-section">
-        
-        <div class="col-xl-6">
-            <address>
+    <div class="row address-section">
+         
+         
+        <div class="col-md-6">
+           
                 <strong>Payment Method:</strong><br>
                 {{ $formData['payment_method'] }}<br>
                 {{ $formData['email'] }}
-            </address>
+           
         </div>
         <div class="col-xl-6 text-end">
-            <address>
+           
                 <strong>Order Date:</strong><br>
                 {{ $formData['date'] }}<br><br>
-            </address>
-        </div>
+          
     </div>
     </div>
 
