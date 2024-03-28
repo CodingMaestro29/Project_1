@@ -5,6 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use App\Models\Cart;
+use App\Models\Student;
+
 class Order extends Model
 {
     use HasFactory;
@@ -25,13 +28,18 @@ class Order extends Model
 
 
        public function cart(){
-           return $this->belongsTo(Cart::class);
+           return $this->belongsTo(Cart::class, 'product_id');
        }
 
 
        public function user(){
-        return $this->belongsTo(Student::class);
+        return $this->belongsTo(Student::class ,'user_id');
     }
+
+
+    protected $dispatchesEvents = [
+        'created' => \App\Events\PaymentMade::class,
+    ];
 
 
 

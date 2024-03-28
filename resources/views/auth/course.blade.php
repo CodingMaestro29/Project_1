@@ -174,15 +174,15 @@
                                        <div class="form-input find-us">                                         
                                          <label>How did you find out<br> about us?</label> <select id="find" name="find">
                                                  <option value="...">...</option>
-                                                  <option value="someone">referral from someone</option>
-                                                  <option value="insurance">Referral from an Insurance company</option>
-                                                  <option value="google">Google</option>
-                                                  <option value="bing">Bing</option>
-                                                  <option value="dmv">DMV website</option>
-                                                  <option value="radio">Radio advertisement</option>
-                                                  <option value="tv">TV advertisement</option>
-                                                  <option value="newspaper">Newspaper or magazine article</option>
-                                                  <option value="testimonials">TESTIMONIALS PAGE</option>
+                                                  <option value="referral from someone">referral from someone</option>
+                                                  <option value="Referral from an Insurance company">Referral from an Insurance company</option>
+                                                  <option value="Google">Google</option>
+                                                  <option value="Bing">Bing</option>
+                                                  <option value="DMV website">DMV website</option>
+                                                  <option value="Radio advertisement">Radio advertisement</option>
+                                                  <option value="TV advertisement">TV advertisement</option>
+                                                  <option value="Newspaper or magazine article">Newspaper or magazine article</option>
+                                                  <option value="TESTIMONIALS PAGE">TESTIMONIALS PAGE</option>
                                             </select> 
                                             <p>How did you find our website?</p>
                                         </div>

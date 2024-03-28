@@ -14,6 +14,9 @@ use App\Listeners\SendCourseCompletionEmail;
 use  App\Events\NewRegistration;
 use App\Listeners\RegistrationEmailSent;
 
+use  App\Events\PaymentMade;
+use App\Listeners\InvoiceEmailSent;
+
 class EventServiceProvider extends ServiceProvider
 {
     /**
@@ -32,6 +35,10 @@ class EventServiceProvider extends ServiceProvider
 
         NewRegistration::class => [
             RegistrationEmailSent ::class,
+        ],
+
+        PaymentMade::class => [
+            InvoiceEmailSent ::class,
         ],
     ];
 
